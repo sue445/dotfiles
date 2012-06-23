@@ -8,7 +8,7 @@ filetype off
 "  set rtp+=~/.vim/vundle.git/ 
 "  call vundle#rc()
 "endif
-set rtp+=~/vimfiles/vundle.git/
+set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
 Bundle 'Shougo/neocomplcache'
