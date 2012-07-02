@@ -1,15 +1,13 @@
 set nocompatible
 filetype off
 
-"if has("win32") || has("win64")
-"  set rtp+=~/vimfiles/vundle.git/ 
-"  call vundle#rc('~/vimfiles/bundle/')
-"else
-"  set rtp+=~/.vim/vundle.git/ 
-"  call vundle#rc()
-"endif
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
+if has("win32") || has("win64")
+  set rtp+=~/vimfiles/vundle.git/ 
+  call vundle#rc('~/vimfiles/bundle/')
+else
+  set rtp+=~/.vim/vundle.git/ 
+  call vundle#rc()
+endif
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
@@ -19,6 +17,9 @@ Bundle 'skwp/vim-rspec.git'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'The-NERD-tree'
 Bundle 'h1mesuke/unite-outline'
+Bundle 'matchit.zip'
+Bundle 'rails.vim'
+Bundle 'project.tar.gz'
 filetype plugin indent on
 
 "<C-Space>でomni補完
@@ -112,5 +113,5 @@ map <D-9> :RunSpec<cr>
 " Cmd+Shift+0
 map <D-9> :RunSpecLine<cr>
 " :source $VIMRUNTIMEmacros/matchit.vim
-:source ~/.vim/plugin/matchit.vim
+:source ~/.vim/bundle/matchit.zip/plugin/matchit.vim
 let g:ruby_refactoring_map_keys=1
