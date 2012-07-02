@@ -18,6 +18,7 @@ Bundle 'thinca/vim-quickrun'
 Bundle 'skwp/vim-rspec.git'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'The-NERD-tree'
+Bundle 'h1mesuke/unite-outline'
 filetype plugin indent on
 
 "<C-Space>でomni補完
