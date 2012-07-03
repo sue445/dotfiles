@@ -20,6 +20,7 @@ Bundle 'h1mesuke/unite-outline'
 Bundle 'matchit.zip'
 Bundle 'rails.vim'
 Bundle 'project.tar.gz'
+Bundle 'taka84u9/vim-ref-ri'
 filetype plugin indent on
 
 "<C-Space>でomni補完
