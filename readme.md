@@ -11,3 +11,6 @@ http://d.hatena.ne.jp/holypp/20110515/1305443997
     git submodule update 
     gem install ri_vim && ri_vim_install
 
+    ln -s ~/dotfiles/_gitignore ~/.gitignore
+    git config --global core.excludesfile $HOME/.gitignore
+
