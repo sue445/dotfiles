@@ -13,4 +13,4 @@ http://d.hatena.ne.jp/holypp/20110515/1305443997
 
     ln -s ~/dotfiles/_gitignore ~/.gitignore
     git config --global core.excludesfile $HOME/.gitignore
-		git config --global core.editor /usr/bin/vim
+    git config --global core.editor /usr/bin/vim
