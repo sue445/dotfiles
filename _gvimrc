@@ -4,7 +4,7 @@ if has('gui_macvim')
   set imdisable        " IME OFF
   set guioptions-=T    " ツールバー非表示
   set antialias        " アンチエイリアス
-  set tabstop=4        " タブサイズ
+  set tabstop=2        " タブサイズ
   set number           " 行番号表示
   set nobackup         " バックアップなし
   set visualbell t_vb= " ビープ音なし
