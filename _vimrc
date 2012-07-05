@@ -149,3 +149,11 @@ function! Lt_Percent_Completion()
  	  return "\%"
 	end
 endf
+
+" 引数なしでvimを開いたらNERDTreeを起動、引数ありならNERDTreeは起動しない
+" http://kokukuma.blogspot.jp/2011/12/vim-essential-plugin-nerdtree.html
+let file_name = expand("%")
+if has('vim_starting') &&  file_name == ""
+    autocmd VimEnter * NERDTree ./
+endif
+
