@@ -36,4 +36,12 @@ http://d.hatena.ne.jp/rochefort/20110410/p1
 http://www.namaraii.com/files/vim-cheatsheet.pdf
 
 ## よく使う
+### ディレクトリツリーを開く
+    :NERDTree
+
+### Markdownのプレビュー（初回時）
+    :MkdPreview!
+
+### Markdownのプレビュー（2回目以降）
+    :MkdPreview
 
