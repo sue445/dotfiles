@@ -21,6 +21,8 @@ Bundle 'matchit.zip'
 Bundle 'tpope/vim-rails'
 Bundle 'project.tar.gz'
 Bundle 'taka84u9/vim-ref-ri'
+Bundle 'mattn/mkdpreview-vim'
+Bundle 'mattn/webapi-vim'
 filetype plugin indent on
 
 "<C-Space>でomni補完
