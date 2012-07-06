@@ -18,6 +18,10 @@ https://github.com/mattn/mkdpreview-vim#installation
 * Pythonは公式ホームページから落としたやつじゃないとPyQt4のインストール時にエラーになる
     * brewで入れたのだとダメ
 
+### for taglist.vim
+Exuberant Ctagsを先に入れる
+    brew install ctags
+
 ## for Git
 ### submoduleを更新する
     git submodule foreach 'git checkout master; git pull'

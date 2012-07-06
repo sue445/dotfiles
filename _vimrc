@@ -24,6 +24,7 @@ Bundle 'mattn/mkdpreview-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'othree/eregex.vim'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'chrismetcalf/vim-taglist' 
 
 filetype plugin indent on
 
