@@ -25,6 +25,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'othree/eregex.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'chrismetcalf/vim-taglist' 
+Bundle 'scrooloose/nerdcommenter'
 
 filetype plugin indent on
 
