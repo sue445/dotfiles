@@ -22,6 +22,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'taka84u9/vim-ref-ri'
 Bundle 'mattn/mkdpreview-vim'
 Bundle 'mattn/webapi-vim'
+Bundle 'othree/eregex.vim'
+
 filetype plugin indent on
 
 "<C-Space>でomni補完
@@ -155,4 +157,9 @@ let file_name = expand("%")
 if has('vim_starting') &&  file_name == ""
     autocmd VimEnter * NERDTree ./
 endif
+
+nnoremap / :M/
+nnoremap ? :M?
+nnoremap ,/ /
+nnoremap ,? ?
 
