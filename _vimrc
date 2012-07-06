@@ -23,6 +23,7 @@ Bundle 'taka84u9/vim-ref-ri'
 Bundle 'mattn/mkdpreview-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'othree/eregex.vim'
+Bundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
 
