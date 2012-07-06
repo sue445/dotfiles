@@ -20,6 +20,7 @@ https://github.com/mattn/mkdpreview-vim#installation
 
 ### for taglist.vim
 Exuberant Ctagsを先に入れる
+
     brew install ctags
 
 ## for Git
