@@ -27,6 +27,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'chrismetcalf/vim-taglist' 
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'yuroyoro/monday'
+Bundle 'tpope/vim-fugitive' 
 
 filetype plugin indent on
 
