@@ -36,6 +36,9 @@ http://d.hatena.ne.jp/rochefort/20110410/p1
 ### rebaseでエラーが出るようになったら 
     git config --global core.editor /usr/bin/vim
 
+### MacのターミナルでGitのブランチ名を表示する
+http://d.hatena.ne.jp/ruedap/20110706/mac_terminal_git_branch_name
+
 # Vimコマンド
 ## チートシート
 http://www.namaraii.com/files/vim-cheatsheet.pdf
