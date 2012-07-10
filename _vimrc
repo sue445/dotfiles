@@ -29,7 +29,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'yuroyoro/monday'
 Bundle 'tpope/vim-fugitive' 
 Bundle 'Shougo/vimproc' 
-"Bundle 'vim-scripts/AnsiEsc.vim' 
+Bundle 'vim-scripts/AnsiEsc.vim' 
 Bundle 'mattn/benchvimrc-vim' 
 
 filetype plugin indent on
@@ -195,7 +195,7 @@ vmap <Leader>c <Plug>NERDCommenterToggle
 " http://qiita.com/items/69035c454de416849b8a
 
 " quickrunの出力結果にAnsiEscを実行して色付けする
-"MyAutocmd FileType quickrun AnsiEsc
+MyAutocmd FileType quickrun AnsiEsc
 
 " quickrunの実行モジュールをvimprocに設定する
 let g:quickrun_config = {}
