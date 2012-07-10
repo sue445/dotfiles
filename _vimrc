@@ -30,6 +30,7 @@ Bundle 'yuroyoro/monday'
 Bundle 'tpope/vim-fugitive' 
 Bundle 'Shougo/vimproc' 
 "Bundle 'vim-scripts/AnsiEsc.vim' 
+Bundle 'mattn/benchvimrc-vim' 
 
 filetype plugin indent on
 
