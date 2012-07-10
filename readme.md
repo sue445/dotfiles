@@ -23,6 +23,13 @@ Exuberant Ctagsを先に入れる
 
     brew install ctags
 
+### for vim-proc
+http://d.hatena.ne.jp/shepherdMaster/20120408/1333900076
+
+    cd ~/dotfiles/vimfiles/bundle/vimproc/
+    rm autoload/*.so 
+    make -f make_mac.mak
+
 ## for Git
 ### submoduleを更新する
     git submodule foreach 'git checkout master; git pull'
@@ -53,3 +60,8 @@ http://www.namaraii.com/files/vim-cheatsheet.pdf
 # Vimプラグイン
 ## NERDTreeのショートカット
 http://vimwiki.net/?scripts%2F18
+
+# RubyとvimでQuick JUnit風にテスト実行
+http://qiita.com/items/69035c454de416849b8a
+
+* 「Could not locate Gemfile」って出たらcdする

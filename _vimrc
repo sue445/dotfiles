@@ -28,8 +28,22 @@ Bundle 'chrismetcalf/vim-taglist'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'yuroyoro/monday'
 Bundle 'tpope/vim-fugitive' 
+Bundle 'Shougo/vimproc' 
+Bundle 'vim-scripts/AnsiEsc.vim' 
 
 filetype plugin indent on
+
+" https://github.com/joker1007/dotfiles/blob/master/vimrc
+" augroup init (from tyru's vimrc)
+augroup vimrc
+  autocmd!
+augroup END
+
+command!
+\ -bang -nargs=*
+\ MyAutocmd
+\ autocmd<bang> vimrc <args>
+
 
 "<C-Space>でomni補完
 imap <C-Space> <C-x><C-o>
@@ -175,4 +189,41 @@ let NERDSpaceDelims = 1
 " コメントされていれば、コメントを外し、コメントされてなければコメント化する。
 nmap <Leader>c <Plug>NERDCommenterToggle
 vmap <Leader>c <Plug>NERDCommenterToggle
+
+" for RSpec TDD
+" http://qiita.com/items/69035c454de416849b8a
+
+" quickrunの出力結果にAnsiEscを実行して色付けする
+MyAutocmd FileType quickrun AnsiEsc
+
+" quickrunの実行モジュールをvimprocに設定する
+let g:quickrun_config = {}
+let g:quickrun_config._ = {'runner' : 'vimproc'}
+
+" rspecを実行するための設定を定義する
+" %cはcommandに設定した値に置換される
+" %oはcmdoptに設定した値に置換される
+" %sはソースファイル名に置換される
+let g:quickrun_config['rspec/bundle'] = {
+  \ 'type': 'rspec/bundle',
+  \ 'command': 'rspec',
+  \ 'outputter': 'buffered:target=buffer',
+  \ 'exec': 'bundle exec %c %o --color --drb --tty %s'
+  \}
+let g:quickrun_config['rspec/normal'] = {
+  \ 'type': 'rspec/normal',
+  \ 'command': 'rspec',
+  \ 'outputter': 'buffered:target=buffer',
+  \ 'exec': '%c %o --color --drb --tty %s'
+  \}
+
+" :QuickRunで実行されるコマンドをrspec用の定義に設定する
+" <Leader>lrをタイプした時に、:QuickRun -cmdopt "-l (カーソル行)"を実行するキーマップを定義する ← これがポイント
+function! RSpecQuickrun()
+  let b:quickrun_config = {'type' : 'rspec/bundle'}
+  nnoremap <expr><silent> <Leader>lr "<Esc>:QuickRun -cmdopt \"-l " . line(".") . "\"<CR>"
+endfunction
+
+" ファイル名が_spec.rbで終わるファイルを読み込んだ時に上記の設定を自動で読み込む
+MyAutocmd BufReadPost *_spec.rb call RSpecQuickrun()
 
