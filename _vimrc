@@ -9,6 +9,7 @@ else
   call vundle#rc()
 endif
 
+Bundle 'AutoComplPop'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc' 
 Bundle 'The-NERD-tree'
