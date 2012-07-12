@@ -31,6 +31,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Shougo/vimproc' 
 Bundle 'vim-scripts/AnsiEsc.vim' 
 Bundle 'mattn/benchvimrc-vim' 
+Bundle 'tpope/vim-endwise'
 
 filetype plugin indent on
 
@@ -90,7 +91,12 @@ imap <C-Space> <C-x><C-o>
 	inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 	inoremap <expr><C-y>  neocomplcache#close_popup()
 	inoremap <expr><C-e>  neocomplcache#cancel_popup()
-	
+
+
+  " for vim-endwise and neocomplcache
+  " https://github.com/tpope/vim-endwise/issues/5
+  inoremap <silent><CR>  <C-R>=neocomplcache#smart_close_popup()<CR><CR>
+
 	" For cursor moving in insert mode(Not recommended)
 	"inoremap <expr><Left>  neocomplcache#close_popup() . "\<Left>"
 	"inoremap <expr><Right> neocomplcache#close_popup() . "\<Right>"
