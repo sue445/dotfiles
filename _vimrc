@@ -63,7 +63,7 @@ let g:ruby_refactoring_map_keys=1
 inoremap ( ()<ESC>i
 inoremap <expr> ) ClosePair(')')
 inoremap < <><ESC>i
-inoremap <expr> ) ClosePair('>')
+inoremap <expr> > ClosePair('>')
 inoremap { {}<ESC>i
 inoremap <expr> } ClosePair('}')
 inoremap [ []<ESC>i
