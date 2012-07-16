@@ -1,6 +1,8 @@
 # ここを参考に環境構築 
 http://d.hatena.ne.jp/holypp/20110515/1305443997
 
+homebrew使うこと前提
+
 # セットアップ 
 ## for Vim 
     cd ~/
@@ -10,13 +12,36 @@ http://d.hatena.ne.jp/holypp/20110515/1305443997
     ln -s ~/dotfiles/vimfiles ~/.vim
 
 ### for mkdpreview-vim
-https://github.com/mattn/mkdpreview-vim#installation
+* https://github.com/mattn/mkdpreview-vim#installation
+* http://tell-k.hatenablog.com/entry/2012/02/11/015727
 
 にもあるように他にbundle以外にもいろいろ必要
 
-* Macだとcurl以外全部
-* Pythonは公式ホームページから落としたやつじゃないとPyQt4のインストール時にエラーになる
-    * brewで入れたのだとダメ
+#### Python
+Macだとデフォルトで入ってる
+
+#### PyQt4
+brewで入れるのが楽だけど時間がかかる 
+
+    brew install pyqt
+    export PYTHONPATH=/usr/local/lib/Python
+
+#### Markdown in Python
+    easy_install ElementTree
+    easy_install Markdown
+
+or
+
+    git clone git://github.com/waylan/Python-Markdown.git python-markdown
+    cd python-markdown
+    python setup.py install
+
+#### curl
+Macならデフォルトで入ってる
+
+#### webapi-vim
+bundleに記載済
+ 
 
 ### for taglist.vim
 Exuberant Ctagsを先に入れる
