@@ -149,3 +149,10 @@ endfunction
 " ファイル名が_spec.rbで終わるファイルを読み込んだ時に上記の設定を自動で読み込む
 MyAutocmd BufReadPost *_spec.rb call RSpecQuickrun()
 
+" タブはスペース2つでインデントする
+set tabstop=2
+set autoindent
+set expandtab
+set shiftwidth=2
+set cindent
+set list
