@@ -2,21 +2,21 @@ set nocompatible
 filetype off
 
 if has("win32") || has("win64")
-  set rtp+=~/vimfiles/vundle.git/ 
+  set rtp+=~/vimfiles/vundle.git/
   call vundle#rc('~/vimfiles/bundle/')
 else
-  set rtp+=~/.vim/vundle.git/ 
+  set rtp+=~/.vim/vundle.git/
   call vundle#rc()
 endif
 
 Bundle 'AutoComplPop'
 Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimproc' 
-Bundle 'chrismetcalf/vim-taglist' 
+Bundle 'Shougo/vimproc'
+Bundle 'chrismetcalf/vim-taglist'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'h1mesuke/unite-outline'
 Bundle 'matchit.zip'
-Bundle 'mattn/benchvimrc-vim' 
+Bundle 'mattn/benchvimrc-vim'
 Bundle 'mattn/mkdpreview-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'othree/eregex.vim'
@@ -27,10 +27,10 @@ Bundle 'taka84u9/vim-ref-ri'
 Bundle 'thinca/vim-quickrun'
 Bundle 'thinca/vim-ref'
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive' 
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/AnsiEsc.vim' 
+Bundle 'vim-scripts/AnsiEsc.vim'
 Bundle 'yuroyoro/monday'
 
 filetype plugin indent on
@@ -101,7 +101,7 @@ nnoremap ? :M?
 nnoremap ,/ /
 nnoremap ,? ?
 
-" for nerdcommenter 
+" for nerdcommenter
 " コメントした後に挿入するスペースの数
 let NERDSpaceDelims = 1
 " キーマップの変更。<Leader>=\+cでコメント化と解除を行う。
@@ -140,10 +140,10 @@ let g:quickrun_config['rspec/normal'] = {
 " <Leader>lrをタイプした時に、:QuickRun -cmdopt "-l (カーソル行)"を実行するキーマップを定義する ← これがポイント
 function! RSpecQuickrun()
   let b:quickrun_config = {'type' : 'rspec/bundle'}
-	" nnoremap <expr><silent> <Leader>lr "<Esc>:QuickRun -cmdopt \"-l " . line(".") . "\"<CR>"
-	
-	" Quick JUnitのようにCommand-0でテストを実行する
-	nnoremap <expr><silent> <D-0> "<Esc>:QuickRun -cmdopt \"-l " . line(".") . "\"<CR>"
+  " nnoremap <expr><silent> <Leader>lr "<Esc>:QuickRun -cmdopt \"-l " . line(".") . "\"<CR>"
+
+  " Quick JUnitのようにCommand-0でテストを実行する
+  nnoremap <expr><silent> <D-0> "<Esc>:QuickRun -cmdopt \"-l " . line(".") . "\"<CR>"
 endfunction
 
 " ファイル名が_spec.rbで終わるファイルを読み込んだ時に上記の設定を自動で読み込む
