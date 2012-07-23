@@ -156,3 +156,8 @@ set expandtab
 set shiftwidth=2
 set cindent
 set list
+
+" Vimで行末の空白を保存時に自動削除する
+" via http://blog.toshimaru.net/vim
+autocmd BufWritePre * :%s/\s\+$//e
+
