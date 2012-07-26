@@ -68,6 +68,11 @@ http://d.hatena.ne.jp/z3100/20120505/1336203155
 
 ローカル固有の設定は ~/.gitconfig.local に置く
 
+#### .gitconfig.local
+    [user]
+      name = sue445
+      email = *********************
+
 ### MacのターミナルでGitのブランチ名を表示する
 http://d.hatena.ne.jp/ruedap/20110706/mac_terminal_git_branch_name
 
