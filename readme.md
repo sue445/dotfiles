@@ -68,11 +68,15 @@ http://d.hatena.ne.jp/z3100/20120505/1336203155
 
 ローカル固有の設定は ~/.gitconfig.local に置く
 
-### rebaseでエラーが出るようになったら
-    git config --global core.editor /usr/bin/vim
-
 ### MacのターミナルでGitのブランチ名を表示する
 http://d.hatena.ne.jp/ruedap/20110706/mac_terminal_git_branch_name
+
+### mergetoolにp4mergeを使う
+    ln -s ~/dotfiles/scripts/p4merge /usr/local/bin/p4merge
+
+* http://wadahiro.hatenablog.com/entry/20111115/1321372150
+* http://d.hatena.ne.jp/nakamura001/20110321/1300699836
+
 
 # Vimコマンド
 ## チートシート

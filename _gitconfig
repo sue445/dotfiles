@@ -12,3 +12,14 @@
 [mergetool "sourcetree"]
   cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
   trustExitCode = true
+
+[merge]
+  tool = p4merge
+
+[mergetool]
+  keepBackup = false
+
+[mergetool "p4merge"]
+  path = p4merge
+  keepTemporaries = false
+  trustExitCode = false
