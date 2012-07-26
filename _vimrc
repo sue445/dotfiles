@@ -157,6 +157,10 @@ set shiftwidth=2
 set cindent
 set list
 
+" スペースなどの見えない文字の表示方法を変える
+" via http://d.hatena.ne.jp/potappo2/20061107/1162862536
+set listchars=tab:>-,nbsp:%,extends:>,precedes:<
+
 " Vimで行末の空白を保存時に自動削除する
 " via http://blog.toshimaru.net/vim
 autocmd BufWritePre * :%s/\s\+$//e
