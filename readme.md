@@ -1,10 +1,10 @@
-# ここを参考に環境構築 
+# ここを参考に環境構築
 http://d.hatena.ne.jp/holypp/20110515/1305443997
 
 homebrew使うこと前提
 
-# セットアップ 
-## for Vim 
+# セットアップ
+## for Vim
     cd ~/
     git clone https://github.com/sue445/dotfiles.git
     ln -s ~/dotfiles/_vimrc ~/.vimrc
@@ -21,7 +21,7 @@ homebrew使うこと前提
 Macだとデフォルトで入ってる
 
 #### PyQt4
-brewで入れるのが楽だけど時間がかかる 
+brewで入れるのが楽だけど時間がかかる
 
     brew install pyqt
     export PYTHONPATH=/usr/local/lib/Python
@@ -41,7 +41,7 @@ Macならデフォルトで入ってる
 
 #### webapi-vim
 bundleに記載済
- 
+
 
 ### for taglist.vim
 Exuberant Ctagsを先に入れる
@@ -52,7 +52,7 @@ Exuberant Ctagsを先に入れる
 http://d.hatena.ne.jp/shepherdMaster/20120408/1333900076
 
     cd ~/dotfiles/vimfiles/bundle/vimproc/
-    rm autoload/*.so 
+    rm autoload/*.so
     make -f make_mac.mak
 
 ## for Git
@@ -61,11 +61,14 @@ http://d.hatena.ne.jp/shepherdMaster/20120408/1333900076
     git commit -am "update submodule"
 http://d.hatena.ne.jp/rochefort/20110410/p1
 
-### ついでに.gitignoreも管理する
+### ついでに.gitignoreと.gitconfigも管理する
     ln -s ~/dotfiles/_gitignore ~/.gitignore
-    git config --global core.excludesfile $HOME/.gitignore
+    ln -s ~/dotfiles/_gitconfig ~/.gitconfig
+http://d.hatena.ne.jp/z3100/20120505/1336203155
 
-### rebaseでエラーが出るようになったら 
+ローカル固有の設定は ~/.gitconfig.local に置く
+
+### rebaseでエラーが出るようになったら
     git config --global core.editor /usr/bin/vim
 
 ### MacのターミナルでGitのブランチ名を表示する
