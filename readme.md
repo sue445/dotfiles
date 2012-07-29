@@ -64,6 +64,11 @@ http://d.hatena.ne.jp/rochefort/20110410/p1
 ### ついでに.gitignoreと.gitconfigも管理する
     ln -s ~/dotfiles/_gitignore ~/.gitignore
     ln -s ~/dotfiles/_gitconfig ~/.gitconfig
+
+    git config --global --includes -l
+
+で設定が反映されていることを確認する
+
 http://d.hatena.ne.jp/z3100/20120505/1336203155
 
 ローカル固有の設定は ~/.gitconfig.local に置く
