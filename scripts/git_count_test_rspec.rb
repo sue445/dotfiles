@@ -3,7 +3,7 @@
 user = `git config --get user.name`.strip
 until_commit = ARGV[0] || "master"
 testcase_regexp = " *it "
-git_log = "git log --author=#{user} --remove-empty --oneline --unified=0 --ignore-all-space HEAD #{until_commit}"
+git_log = "git log --author=#{user} --remove-empty --oneline --unified=0 --ignore-all-space #{until_commit}..HEAD"
 
 p git_log
 
