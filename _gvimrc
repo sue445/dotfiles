@@ -10,8 +10,8 @@ if has('gui_macvim')
   set visualbell t_vb= " ビープ音なし
 
   colorscheme desert   " カラースキーマ
-  set columns=100      " 横幅
-  set lines=35         " 行数
+  set columns=180      " 横幅
+  set lines=160        " 行数
 
   set nowrapscan       " 検索をファイルの先頭へループしない
 
