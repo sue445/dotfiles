@@ -47,7 +47,7 @@ map <D-9> :RunSpecLine<cr>
 let g:ruby_refactoring_map_keys=1
 
 " 括弧の後ろを自動で補完する
-" http://d.hatena.ne.jp/babie/20110130/1296348203
+" ref. http://d.hatena.ne.jp/babie/20110130/1296348203
 inoremap ( ()<ESC>i
 inoremap <expr> ) ClosePair(')')
 inoremap < <><ESC>i
@@ -67,7 +67,7 @@ function! ClosePair(char)
 endf
 
 " erbの閉じ括弧を補完する
-" http://d.hatena.ne.jp/yamitzky/20111213/1323739808
+" ref. http://d.hatena.ne.jp/yamitzky/20111213/1323739808
 inoremap <expr> % Lt_Percent_Completion()
 function! Lt_Percent_Completion()
   if matchstr(getline('.'), '.', col('.') -1 ) == ">"
@@ -78,7 +78,7 @@ function! Lt_Percent_Completion()
 endf
 
 " 引数なしでvimを開いたらNERDTreeを起動、引数ありならNERDTreeは起動しない
-" http://kokukuma.blogspot.jp/2011/12/vim-essential-plugin-nerdtree.html
+" ref. http://kokukuma.blogspot.jp/2011/12/vim-essential-plugin-nerdtree.html
 let file_name = expand("%")
 if has('vim_starting') &&  file_name == ""
     autocmd VimEnter * NERDTree ./
@@ -98,7 +98,7 @@ nmap <Leader>c <Plug>NERDCommenterToggle
 vmap <Leader>c <Plug>NERDCommenterToggle
 
 " for RSpec TDD
-" http://qiita.com/items/69035c454de416849b8a
+" ref. http://qiita.com/items/69035c454de416849b8a
 
 " quickrunの出力結果にAnsiEscを実行して色付けする
 autocmd FileType quickrun AnsiEsc
@@ -146,10 +146,10 @@ set cindent
 set list
 
 " スペースなどの見えない文字の表示方法を変える
-" via http://d.hatena.ne.jp/potappo2/20061107/1162862536
+" ref. http://d.hatena.ne.jp/potappo2/20061107/1162862536
 set listchars=tab:>-,nbsp:%,extends:>,precedes:<
 
 " Vimで行末の空白を保存時に自動削除する
-" via http://blog.toshimaru.net/vim
+" ref. http://blog.toshimaru.net/vim
 autocmd BufWritePre * :%s/\s\+$//e
 
