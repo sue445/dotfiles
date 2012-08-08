@@ -35,18 +35,6 @@ Bundle 'yuroyoro/monday'
 
 filetype plugin indent on
 
-" https://github.com/joker1007/dotfiles/blob/master/vimrc
-" augroup init (from tyru's vimrc)
-augroup vimrc
-  autocmd!
-augroup END
-
-command!
-\ -bang -nargs=*
-\ MyAutocmd
-\ autocmd<bang> vimrc <args>
-
-
 "<C-Space>でomni補完
 imap <C-Space> <C-x><C-o>
 
@@ -113,7 +101,7 @@ vmap <Leader>c <Plug>NERDCommenterToggle
 " http://qiita.com/items/69035c454de416849b8a
 
 " quickrunの出力結果にAnsiEscを実行して色付けする
-MyAutocmd FileType quickrun AnsiEsc
+autocmd FileType quickrun AnsiEsc
 
 " quickrunの実行モジュールをvimprocに設定する
 let g:quickrun_config = {}
@@ -147,7 +135,7 @@ function! RSpecQuickrun()
 endfunction
 
 " ファイル名が_spec.rbで終わるファイルを読み込んだ時に上記の設定を自動で読み込む
-MyAutocmd BufReadPost *_spec.rb call RSpecQuickrun()
+autocmd BufReadPost *_spec.rb call RSpecQuickrun()
 
 " タブはスペース2つでインデントする
 set tabstop=2
