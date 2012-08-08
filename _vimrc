@@ -33,6 +33,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/AnsiEsc.vim'
 Bundle 'yuroyoro/monday'
 
+autocmd!
 filetype plugin indent on
 
 "<C-Space>でomni補完
