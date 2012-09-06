@@ -1,6 +1,15 @@
-.DS_Store
+# editor cache
 *.swp
 *.orig
+
+# OS cache file
+.DS_Store
 Thumbs.db
+
+# IDE meta dir
+.idea/
+.settings/
+
+# for Rails
 GemFile.lock
 
