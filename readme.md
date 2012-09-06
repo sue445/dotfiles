@@ -107,3 +107,5 @@ http://vimwiki.net/?scripts%2F18
 http://qiita.com/items/69035c454de416849b8a
 
 * 「Could not locate Gemfile」って出たらcdする
+
+[![endorse](http://api.coderwall.com/sue445/endorsecount.png)](http://coderwall.com/sue445)
