@@ -19,6 +19,7 @@ Bundle 'matchit.zip'
 Bundle 'mattn/benchvimrc-vim'
 Bundle 'mattn/mkdpreview-vim'
 Bundle 'mattn/webapi-vim'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'othree/eregex.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'skwp/vim-rspec.git'
@@ -28,6 +29,7 @@ Bundle 'thinca/vim-quickrun'
 Bundle 'thinca/vim-ref'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-pathogen'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/AnsiEsc.vim'
@@ -153,4 +155,12 @@ set listchars=tab:>-,nbsp:%,extends:>,precedes:<
 " Vimで行末の空白を保存時に自動削除する
 " ref. http://blog.toshimaru.net/vim
 autocmd BufWritePre * :%s/\s\+$//e
+
+" インデントをわかりやすくする
+" ref. http://wd.layer13.com/2011/12/03/T16-04-34/Vim%20%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88%E3%82%92%E3%82%8F%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%8F%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%82Indent%20Guides
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#121212 ctermbg=233
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=235
+
+let g:indent_guides_enable_on_vim_startup = 1
 
