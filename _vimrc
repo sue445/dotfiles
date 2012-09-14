@@ -38,6 +38,10 @@ Bundle 'yuroyoro/monday'
 autocmd!
 filetype plugin indent on
 
+" <leader> を ¥キー だけでいけるようにする
+" ref. http://amatsukikuu.blogspot.jp/2012/01/macvim.html
+map ¥ <leader>
+
 "<C-Space>でomni補完
 imap <C-Space> <C-x><C-o>
 
