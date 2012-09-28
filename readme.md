@@ -78,8 +78,21 @@ http://d.hatena.ne.jp/z3100/20120505/1336203155
       name = sue445
       email = *********************
 
-### MacのターミナルでGitのブランチ名を表示する
-http://d.hatena.ne.jp/ruedap/20110706/mac_terminal_git_branch_name
+### MacのターミナルでGitのブランチ名を表示やタブ補完したい
+* 下記を参考に `.bash_profile` に追記
+ * http://sue445.hatenablog.com/entry/2012/08/30/005627
+ * http://blog.ruedap.com/entry/20110706/mac_terminal_git_branch_name
+* ただしbrewでインストールした時点で下記のようにエイリアスが張られるため、git-completion.bashの個別インストールは不要
+```
+$ ll /usr/local/etc/bash_completion.d/git-completion.bash
+lrwxr-xr-x  1 sue445  admin  65  8 29 10:27 /usr/local/etc/bash_completion.d/git-completion.bash -> ../../Cellar/git/1.7.12/etc/bash_completion.d/git-completion.bash
+```
+ * これでok
+``` bash
+source /usr/local/etc/bash_completion.d/git-completion.bash
+```
+* 別ファイルからincludeする場合はこんな感じ
+ * https://github.com/sue445/dotfiles/blob/master/bash_completion_git.sh
 
 ### mergetoolにp4mergeを使う
     ln -s ~/dotfiles/scripts/p4merge /usr/local/bin/p4merge
