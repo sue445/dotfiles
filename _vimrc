@@ -176,3 +176,8 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=235
 " 自動読み込みを有効にするとgit commit --amendで警告が出るため無効化する
 "let g:indent_guides_enable_on_vim_startup = 1
 
+" 文字コードを自動判別する
+" ref. http://d.hatena.ne.jp/over80/20080907/1220794834
+set encoding=utf-8
+set fileencodings=utf-8,cp932,sjis,euc-jp,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213
+
