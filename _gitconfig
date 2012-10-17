@@ -13,16 +13,19 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
+# ref. Gitポケットリファレンス P141
 [merge]
+  keepBackup = false
   tool = p4merge
 
 [mergetool]
   keepBackup = false
 
 [mergetool "p4merge"]
-  path = p4merge
+  cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
   keepTemporaries = false
   trustExitCode = false
+  keepBackup = false
 
 [color]
   ui = auto
