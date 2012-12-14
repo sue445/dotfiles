@@ -100,6 +100,15 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 * http://wadahiro.hatenablog.com/entry/20111115/1321372150
 * http://d.hatena.ne.jp/nakamura001/20110321/1300699836
 
+## tig
+* コンソールから使える git ブラウザ、tig が超便利 - #生存戦略 、それは - subtech
+ * http://subtech.g.hatena.ne.jp/secondlife/20101114/1289736508
+
+に影響されて入れてみた
+
+Macなら `brew install tig` でOK
+
+    ln -s ~/dotfiles/_tigrc ~/.tigrc
 
 # Vimコマンド
 ## チートシート
