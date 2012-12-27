@@ -56,7 +56,11 @@ bundleに記載済
 ### for taglist.vim
 Exuberant Ctagsを先に入れる
 
+Mac
     brew install ctags
+
+Debian
+    apt-get install ctags
 
 ### for vim-proc
 http://d.hatena.ne.jp/shepherdMaster/20120408/1333900076
