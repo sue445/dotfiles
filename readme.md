@@ -57,9 +57,11 @@ bundleに記載済
 Exuberant Ctagsを先に入れる
 
 Mac
+
     brew install ctags
 
 Debian
+
     apt-get install ctags
 
 ### for vim-proc
