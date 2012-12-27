@@ -12,6 +12,7 @@ endif
 Bundle 'AutoComplPop'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc'
+Bundle 'Shougo/vimshell'
 Bundle 'chrismetcalf/vim-taglist'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'h1mesuke/unite-outline'
@@ -180,4 +181,17 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=235
 " ref. http://d.hatena.ne.jp/over80/20080907/1220794834
 set encoding=utf-8
 set fileencodings=utf-8,cp932,sjis,euc-jp,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213
+
+" vim-shellのショートカット
+" ref. http://d.hatena.ne.jp/nauthiz/20101107/1289140518
+" ,is: シェルを起動
+nnoremap <silent> ,is :VimShell<CR>
+" ,ipy: pythonを非同期で起動
+nnoremap <silent> ,ipy :VimShellInteractive python<CR>
+" ,irb: irbを非同期で起動
+nnoremap <silent> ,irb :VimShellInteractive irb<CR>
+" ,ss: 非同期で開いたインタプリタに現在の行を評価させる
+vmap <silent> ,ss :VimShellSendString<CR>
+" 選択中に,ss: 非同期で開いたインタプリタに選択行を評価させる
+nnoremap <silent> ,ss <S-v>:VimShellSendString<CR>
 
