@@ -6,7 +6,17 @@ homebrew使うこと前提
 # セットアップ
 ## for Vim
     cd ~/
+
     git clone https://github.com/sue445/dotfiles.git
+    git submodule init
+    git submodule update
+
+または
+
+    git clone --recursive https://github.com/sue445/dotfiles.git
+
+clone時に `--recursive` をつけることでsubmoduleも同時にcloneできる
+
     ln -s ~/dotfiles/_vimrc ~/.vimrc
     ln -s ~/dotfiles/_gvimrc ~/.gvimrc
     ln -s ~/dotfiles/vimfiles ~/.vim
