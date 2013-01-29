@@ -34,3 +34,6 @@
   default = matching
 [user]
 	email = go.sueyoshi@drecom.co.jp
+
+[merge]
+    ff = false
