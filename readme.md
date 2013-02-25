@@ -126,6 +126,16 @@ Macなら `brew install tig` でOK
 
     ln -s ~/dotfiles/_tigrc ~/.tigrc
 
+## tmux
+* tmuxのすすめ | catatsuyのblog
+ * http://blog.catatsuy.org/a/243
+
+に影響されていれてみた
+
+Macなら `brew install tmux` でOK
+
+    ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
+
 # Vimコマンド
 ## チートシート
 http://www.namaraii.com/files/vim-cheatsheet.pdf
