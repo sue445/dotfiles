@@ -49,4 +49,5 @@
     logn = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
     current-branch = "!sh -c \"git branch | grep '*' | awk '{ print \\$2 }' \""
     push-for-review = "!sh -c 'git push origin HEAD:refs/for/master/`git current-branch`'"
+    ri = rebase -i
 
