@@ -6,7 +6,11 @@
 .DS_Store
 Thumbs.db
 
-# IDE meta dir
+# IDE meta data
+## IntelliJ
 .idea/
+*.iml
+
+## Eclipse
 .settings/
 
