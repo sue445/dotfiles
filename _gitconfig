@@ -41,6 +41,7 @@
     co = checkout
     st = status -sb
     ci = commit -v
+    ca = commit --amend
     di = diff
     br = branch
     wh = whatchanged
