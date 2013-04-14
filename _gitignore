@@ -9,10 +9,15 @@ Thumbs.db
 # IDE meta data
 ## IntelliJ
 .idea/
+out/
 *.iml
 *.ipr
 *.iws
 
 ## Eclipse
 .settings/
+
+## gradle
+.gradle/
+build/
 
