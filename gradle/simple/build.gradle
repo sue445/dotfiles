@@ -1,0 +1,49 @@
+// ref. http://mikeneck.blogspot.jp/2012/03/gradle-groovy-idea.html
+
+def description = 'simple skelton'
+def group = 'net.sue445'
+def version = '0.0.1'
+
+def lang = ['groovy', 'java']
+
+lang.each {ln ->
+    apply plugin: ln
+}
+apply plugin: 'idea'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    groovy 'org.codehaus.groovy:groovy-all:2.1.3'
+
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.hamcrest:hamcrest-all:1.3'
+}
+
+task structure(depends : idea) << {
+    def dirs = []
+    dirs << 'src'
+    sourceSets.all { src ->
+        dirs << "src/${src.name}"
+        lang.each { ln ->
+            dirs << "src/${src.name}/${ln}"
+        }
+        dirs << "src/${src.name}/resources"
+    }
+    dirs.each {
+        def dir = new File(it)
+        if(dir.exists() == false) dir.mkdir()
+    }
+}
+
