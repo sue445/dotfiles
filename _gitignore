@@ -16,6 +16,9 @@ out/
 
 ## Eclipse
 .settings/
+.classpath
+.project
+bin/
 
 ## gradle
 .gradle/
