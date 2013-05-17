@@ -1,0 +1,41 @@
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
+
+# You may uncomment the following lines if you want `ls' to be colorized:
+export LS_OPTIONS='--color=auto'
+# eval "`dircolors`"
+# alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l'
+# alias l='ls $LS_OPTIONS -lA'
+#
+# Some more alias to avoid making mistakes:
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
+alias g='git'
+alias t='tig'
+alias bi-vendor='bundle install --path vendor/bundle'
+alias be='bundle exec'
+alias suvi='sudo -H vi'
+
+function __show_errorcode() {
+  ERR=$?
+  if [ $ERR != 0 ]; then
+    echo -en "\033[31m✘ $ERR"
+  else
+    echo -en "\033[32m✓"
+  fi
+}
+function __ps1_hostname() {
+  local err=$?
+  hostname
+  exit $err
+}
+
+export PS1='
+[$(__ps1_hostname)] $(__show_errorcode) \[\033[33m\]\w\[\033[0m\]
+[$(__ps1_hostname)] \[\033[32m\][$(date +"%m-%d %H:%M:%S")]\[\033[0m\] § '
+
+
