@@ -33,9 +33,14 @@ function __ps1_hostname() {
   hostname
   exit $err
 }
+function __ps1_username() {
+  local err=$?
+  whoami
+  exit $err
+}
 
 export PS1='
-[$(__ps1_hostname)] $(__show_errorcode) \[\033[33m\]\w\[\033[0m\]
-[$(__ps1_hostname)] \[\033[32m\][$(date +"%m-%d %H:%M:%S")]\[\033[0m\] § '
+[$(__ps1_username)@$(__ps1_hostname)] $(__show_errorcode) \[\033[33m\]\w\[\033[0m\]
+[$(__ps1_username)@$(__ps1_hostname)] \[\033[32m\][$(date +"%m-%d %H:%M:%S")]\[\033[0m\] § '
 
 
