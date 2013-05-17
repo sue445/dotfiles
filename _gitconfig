@@ -18,6 +18,9 @@
   keepBackup = false
   tool = p4merge
 
+[merge]
+  ff = false
+
 [mergetool]
   keepBackup = false
 
@@ -33,21 +36,25 @@
 [push]
   default = matching
 
-[merge]
-    ff = false
+[alias]
+  n  = now --all --stat
 
 # ref. https://github.com/shishi/dotfiles/blob/master/.gitconfig
 [alias]
-    co = checkout
-    st = status -sb
-    ci = commit -v
-    ca = commit --amend
-    di = diff
-    br = branch
-    wh = whatchanged
-    stat = log --stat --summary
-    logs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --stat
-    logn = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
-    ri = rebase -i
-    n  = now --all --stat
+  co = checkout
+  st = status -sb
+  ci = commit -v
+  ca = commit --amend
+  di = diff
+  br = branch
+  wh = whatchanged
+  stat = log --stat --summary
+  logs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --stat
+  logn = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
+  ri = rebase -i
 
+# ref https://gist.github.com/teppeis/4117588
+[alias]
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+  f = fetch --prune
+  ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >> .gitignore
