@@ -38,6 +38,7 @@
 
 [alias]
   n  = now --all --stat
+  fm = !git fetch origin && git merge origin --ff
 
 # ref. https://github.com/shishi/dotfiles/blob/master/.gitconfig
 [alias]
