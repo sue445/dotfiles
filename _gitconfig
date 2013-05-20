@@ -38,7 +38,7 @@
 
 [alias]
   n  = now --all --stat
-  fm = !git fetch origin && git merge origin --ff
+  fm = !git fetch origin && git merge --ff origin/$(git branch --contains HEAD 2>/dev/null | grep "^*" | tr -d '\\* ')
 
 # ref. https://github.com/shishi/dotfiles/blob/master/.gitconfig
 [alias]
