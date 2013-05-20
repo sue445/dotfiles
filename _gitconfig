@@ -21,9 +21,6 @@
 [merge]
   ff = false
 
-[pull]
-  rebase = true
-
 [mergetool]
   keepBackup = false
 
