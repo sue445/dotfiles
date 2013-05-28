@@ -39,6 +39,7 @@
 [alias]
   n  = now --all --stat
   fm = !git fetch origin && git merge --ff origin/$(git branch --contains HEAD 2>/dev/null | grep "^*" | tr -d '\\* ')
+  ignore = !printf $1 >> .gitignore
 
 # ref. https://github.com/shishi/dotfiles/blob/master/.gitconfig
 [alias]
@@ -58,4 +59,3 @@
 [alias]
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
   f = fetch --prune
-  ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >> .gitignore
