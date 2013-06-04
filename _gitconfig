@@ -57,5 +57,5 @@
 # ref https://gist.github.com/teppeis/4117588
 [alias]
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
-  f = fetch --prune
+  fp = fetch --prune
   ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >> .gitignore
