@@ -34,7 +34,7 @@
   ui = auto
 
 [push]
-  default = matching
+  default = current
 
 [alias]
   n  = now --all --stat
