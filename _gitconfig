@@ -39,6 +39,7 @@
 [alias]
   n  = now --all --stat
   fm = !git fetch origin && git merge --ff origin/$(git branch --contains HEAD 2>/dev/null | grep "^*" | tr -d '\\* ')
+  dry-merge = merge --no-commit --no-ff
 
 # ref. https://github.com/shishi/dotfiles/blob/master/.gitconfig
 [alias]
