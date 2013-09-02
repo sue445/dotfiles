@@ -9,8 +9,10 @@ if File.directory?(path)
   Dir.glob("#{path}/**/*").each do |file|
     system "xattr -d com.apple.metadata:kMDItemWhereFroms #{file}"
     system "xattr -d com.apple.quarantine #{file}"
+    system "xattr -d com.apple.FinderInfo #{file}"
   end
 else
   system "xattr -d com.apple.metadata:kMDItemWhereFroms #{path}"
   system "xattr -d com.apple.quarantine #{path}"
+  system "xattr -d com.apple.FinderInfo #{path}"
 end
