@@ -40,8 +40,13 @@ function __ps1_username() {
   exit $err
 }
 
+source ~/dotfiles/vendor/bash_completion.d/git-prompt.sh
+source ~/dotfiles/vendor/bash_completion.d/git-completion.bash
+__git_complete g __git_main
+GIT_PS1_SHOWDIRTYSTATE=true
+
 export PS1='
-[$(__ps1_username)@$(__ps1_hostname)] $(__show_errorcode) \[\033[33m\]\w\[\033[0m\]
+[$(__ps1_username)@$(__ps1_hostname)] $(__show_errorcode) \[\033[33m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]
 [$(__ps1_username)@$(__ps1_hostname)] \[\033[32m\][$(date +"%m-%d %H:%M:%S")]\[\033[0m\] § '
 
 
