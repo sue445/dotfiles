@@ -20,6 +20,7 @@ alias ta='tig --all'
 alias bi-vendor='bundle install --path vendor/bundle'
 alias be='bundle exec'
 alias suvi='sudo -H vi'
+alias rake-dev='~/dotfiles/scripts/rake-dev.sh'
 
 function __show_errorcode() {
   ERR=$?
