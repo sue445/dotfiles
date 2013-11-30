@@ -4,12 +4,15 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # You may uncomment the following lines if you want `ls' to be colorized:
-export LS_OPTIONS='--color=auto'
-# eval "`dircolors`"
-# alias ls='ls $LS_OPTIONS'
-alias ll='ls $LS_OPTIONS -l'
-# alias l='ls $LS_OPTIONS -lA'
-#
+case "${OSTYPE}" in
+darwin*)
+  alias ll="ls -lG"
+  ;;
+linux*)
+  alias ll='ls -l --color'
+  ;;
+esac
+
 # Some more alias to avoid making mistakes:
 # alias rm='rm -i'
 # alias cp='cp -i'
