@@ -23,3 +23,5 @@ out/
 .gradle/
 build/
 
+# Excel temp file
+~$*
