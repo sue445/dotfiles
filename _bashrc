@@ -18,6 +18,7 @@ esac
 # alias cp='cp -i'
 # alias mv='mv -i'
 alias g='git'
+alias gs='git status -sb'
 alias t='tig'
 alias ta='tig --all'
 alias bi-vendor='bundle install --path vendor/bundle'
