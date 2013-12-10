@@ -13,7 +13,7 @@ ATTRIBUTES = %w(
 
 def rm_xttr(path)
   ATTRIBUTES.each do |attr|
-    system "xattr -d #{attr} #{path}"
+    system "xattr -d #{attr} #{path} >/dev/null 2>&1"
   end
 end
 
