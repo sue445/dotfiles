@@ -16,6 +16,7 @@ Bundle 'Shougo/vimshell'
 Bundle 'chrismetcalf/vim-taglist'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'h1mesuke/unite-outline'
+Bundle 'itchyny/calendar.vim'
 Bundle 'matchit.zip'
 Bundle 'mattn/benchvimrc-vim'
 Bundle 'mattn/habatobi-vim'
@@ -195,4 +196,8 @@ nnoremap <silent> ,irb :VimShellInteractive irb<CR>
 vmap <silent> ,ss :VimShellSendString<CR>
 " 選択中に,ss: 非同期で開いたインタプリタに選択行を評価させる
 nnoremap <silent> ,ss <S-v>:VimShellSendString<CR>
+
+" ref. http://d.hatena.ne.jp/itchyny/20140108/1389164688
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
 
