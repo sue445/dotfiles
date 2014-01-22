@@ -1,0 +1,5 @@
+script: echo "VAR1=$VAR1, VAR2=$VAR2"
+env:
+  global:
+    # travis encrypt VAR1=foo VAR2=baz
+    secure: "h+1848Nsz5phbcdUMt8FpYNBHIWQu+6aLiCNyX/uGgcC/bx71K8AE+52x22+EiHDamk8yrVAajVwsPYv8nBKSEEj9IGkEmaOETXi+v5Bi1cHwghK7fbFAdpBLBhwIgoRcmSZel96q9s4njBSXbBYnlLxcwdTyzOpUZ1iwVNLzFk="
