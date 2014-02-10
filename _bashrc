@@ -25,6 +25,7 @@ alias bi-vendor='bundle install --path vendor/bundle'
 alias be='bundle exec'
 alias suvi='sudo -H vi'
 alias rake-dev='~/dotfiles/scripts/rake-dev.sh'
+alias rmigc='bundle exec rake db:migrate db:test:clone'
 alias re='rbenv'
 
 function __show_errorcode() {
