@@ -36,6 +36,10 @@
 [push]
   default = current
 
+# http://qiita.com/yuya_presto/items/5d99499cf96c0ebb09f8
+[rerere]
+  enabled = true
+
 [alias]
   n  = now --all --stat
   fm = !git fetch --prune origin && git merge --ff origin/$(git branch --contains HEAD 2>/dev/null | grep "^*" | tr -d '\\* ')
