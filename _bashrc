@@ -58,7 +58,13 @@ export PS1='
 
 # via. http://rhysd.hatenablog.com/entry/20120226/1330265121
 function gem(){
-    $HOME/.rbenv/shims/gem $*
+    if [ -n $RBENV_ROOT ]
+    then
+      $RBENV_ROOT/shims/gem $*
+    else
+      $HOME/.rbenv/shims/gem $*
+    fi
+
     if [ "$1" = "install" ] || [ "$1" = "i" ] || [ "$1" = "uninstall" ] || [ "$1" = "uni" ]
     then
         rbenv rehash
