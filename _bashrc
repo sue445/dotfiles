@@ -59,7 +59,7 @@ export PS1='
 
 # via. http://rhysd.hatenablog.com/entry/20120226/1330265121
 function gem(){
-    if [ -n $RBENV_ROOT ]
+    if [ -n "$RBENV_ROOT" ]
     then
       $RBENV_ROOT/shims/gem $*
     else
