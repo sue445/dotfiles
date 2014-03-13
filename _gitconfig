@@ -45,6 +45,7 @@
   fm = !git fetch --prune origin && git merge --ff origin/$(git branch --contains HEAD 2>/dev/null | grep "^*" | tr -d '\\* ')
   dry-merge = merge --no-commit --no-ff
   mt = mergetool
+  ds = diff --stat
 
 # ref. https://github.com/shishi/dotfiles/blob/master/.gitconfig
 [alias]
