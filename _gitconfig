@@ -30,8 +30,8 @@
   trustExitCode = false
   keepBackup = false
 
-[color]
-  ui = auto
+#[color]
+#  ui = auto
 
 [push]
   default = current
