@@ -31,3 +31,6 @@ vendor/bundle/
 
 ## rbenv
 .ruby-version
+
+# LibreOffice temp file
+.~lock.*#
