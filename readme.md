@@ -136,6 +136,9 @@ Macなら `brew install tmux` でOK
 
     ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
 
+* tmuxを管理者権限の無いユーザーで$HOMEにインストール | 身の回りの観測問題
+  * http://minomawari.jp/2014/04/09/how-to-install-tmux-for-non-root-users/
+
 # Vimコマンド
 ## チートシート
 http://www.namaraii.com/files/vim-cheatsheet.pdf
