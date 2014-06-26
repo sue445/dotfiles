@@ -1,3 +1,6 @@
 [user]
   name =
   email =
+
+[merge]
+  tool = vimdiff
