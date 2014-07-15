@@ -1,3 +1,13 @@
+# via. https://github.com/kaosf/dotfiles/commit/c9f1d62f859fcc531790fd288082ee0f0a853e32
+set vertical-split = horizontal
+
+bind generic H view-help
+bind generic h scroll-left
+bind generic L view-log
+bind generic l scroll-right
+bind generic <C-F> move-page-down
+bind generic <C-B> move-page-up
+
 # vim like paging
 bind generic g move-first-line
 bind generic G move-last-line
