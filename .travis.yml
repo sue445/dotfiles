@@ -1,4 +1,10 @@
-script: echo "VAR1=$VAR1, VAR2=$VAR2"
+language: ruby
+rvm:
+  - 2.0
+  - 2.1
+script:
+  - echo "ruby --version"
+  - echo "VAR1=$VAR1, VAR2=$VAR2"
 env:
   global:
     # travis encrypt VAR1=foo;VAR2=baz
