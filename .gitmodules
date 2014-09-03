@@ -1,3 +1,6 @@
 [submodule "vimfiles/vundle.git"]
 	path = vimfiles/vundle.git
 	url = http://github.com/gmarik/vundle.git
+[submodule "vendor/reporttime"]
+	path = vendor/reporttime
+	url = git@github.com:sue445/reporttime.git
