@@ -6,5 +6,6 @@ ln -s ~/dotfiles/_gitconfig ~/.gitconfig
 ln -s ~/dotfiles/_gitignore ~/.gitignore
 ln -s ~/dotfiles/_tigrc     ~/.tigrc
 ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/_rbenv/default-gems ~/.rbenv/default-gems
 
 cp -i ~/dotfiles/_gitconfig.local.example ~/.gitconfig.local
