@@ -47,6 +47,10 @@
   mt = mergetool
   ds = diff --stat
 
+# ref. http://qiita.com/janus_wel/items/45275f5fbc3823fa698f
+[alias]
+  overwrite = push --force-with-lease
+
 # ref. https://github.com/shishi/dotfiles/blob/master/.gitconfig
 [alias]
   co = checkout
