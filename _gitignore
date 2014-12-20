@@ -28,6 +28,7 @@ build/
 
 # Ruby
 vendor/bundle/
+.bundle/
 
 ## rbenv
 .ruby-version
