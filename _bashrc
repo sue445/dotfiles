@@ -72,3 +72,6 @@ function gem(){
         rbenv rehash
     fi
 }
+
+source ~/dotfiles/iterm_colorize_ssh.sh
+
