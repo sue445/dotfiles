@@ -1,6 +1,6 @@
 ITERM_SESSION_NAME=Default
 
-if [ $TERM_PROGRAM = "iTerm.app" ]; then
+if [ "$TERM_PROGRAM" = "iTerm.app" ]; then
   set_term_bgcolor(){
     local R=$1
     local G=$2
