@@ -40,6 +40,9 @@
 [rerere]
   enabled = true
 
+[rebase]
+  autosquash = true
+
 [alias]
   n  = now --all --stat
   fm = !git fetch --prune origin && git merge --ff origin/$(git branch --contains HEAD 2>/dev/null | grep "^*" | tr -d '\\* ')
