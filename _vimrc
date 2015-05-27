@@ -47,7 +47,8 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""
 
 set nocompatible
-filetype off
+filetype on
+syntax on
 
 autocmd!
 filetype plugin indent on
