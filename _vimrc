@@ -47,8 +47,6 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""
 
 set nocompatible
-filetype on
-syntax on
 
 autocmd!
 filetype plugin indent on
@@ -129,4 +127,7 @@ let g:indent_guides_auto_colors = 0
 " ref. http://d.hatena.ne.jp/over80/20080907/1220794834
 set encoding=utf-8
 set fileencodings=utf-8,cp932,sjis,euc-jp,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213
+
+filetype on
+syntax on
 
