@@ -1,0 +1,35 @@
+atom_package_names:
+  - git-plus
+  - language-slim
+  - sort-lines
+  - vim-mode
+dotfiles:
+  - .atom/keymap.cson
+  - .gemrc
+  - .gitconfig
+  - .gitexcludes
+  - .gitignore
+  - .rbenv/default-gems
+  - .tigrc
+  - .tmux.conf
+homebrew_package_names:
+  - cmake
+  - gnu-sed
+  - hub
+  - icu4c
+  - imagemagick
+  - jq
+  - memcached
+  - mysql
+  - node
+  - openssl
+  - rbenv
+  - rbenv-default-gems
+  - readline
+  - redis
+  - ruby-build
+  - tig
+  - tmux
+  - tree
+  - vim
+
