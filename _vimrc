@@ -27,7 +27,7 @@ NeoBundle 'AutoComplPop'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'matchit.zip'
-NeoBundle 'mattn/benchvimrc-vim'
+NeoBundle 'mattn/benchvimrc-vm'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'othree/eregex.vim'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -43,7 +43,7 @@ filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-NeoBundleCheck
+"NeoBundleCheck
 """""""""""""""""""""""""""""""""
 
 set nocompatible
@@ -136,8 +136,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 " インデントをわかりやすくする
 " ref. http://wd.layer13.com/2011/12/03/T16-04-34/Vim%20%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88%E3%82%92%E3%82%8F%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%8F%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%82Indent%20Guides
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#121212 ctermbg=233
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=235
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#121212 ctermbg=233
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=235
 
 " 自動読み込みを有効にするとgit commit --amendで警告が出るため無効化する
 "let g:indent_guides_enable_on_vim_startup = 1
