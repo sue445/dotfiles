@@ -33,7 +33,7 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 ```
 
 * 別ファイルからincludeする場合はこんな感じ
- * https://github.com/sue445/dotfiles/blob/master/bash_completion_git.sh
+  * [scripts/bash_completion_git.sh](scripts/bash_completion_git.sh)
 
 ### mergetoolにp4mergeを使う
     ln -s ~/dotfiles/scripts/p4merge /usr/local/bin/p4merge
@@ -74,8 +74,4 @@ http://qiita.com/items/69035c454de416849b8a
 * 「Could not locate Gemfile」って出たらcdする
 
 [![endorse](http://api.coderwall.com/sue445/endorsecount.png)](http://coderwall.com/sue445)
-
-
-
-
 
