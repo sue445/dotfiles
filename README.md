@@ -10,6 +10,9 @@ git clone https://github.com/sue445/dotfiles.git
 cd dotfiles
 ./setup.sh
 vi ~/.gitconfig.local
+
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+# :NeoBundleInstall
 ```
 
 #### curl
