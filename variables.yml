@@ -14,8 +14,10 @@ dotfiles:
   - .tmux.conf
 homebrew_package_names:
   - cmake
-  - gnu-sed
   - git-now
+  - gnu-sed
+  - go
+  - gradle
   - hub
   - icu4c
   - imagemagick
@@ -26,15 +28,18 @@ homebrew_package_names:
   - node
   - openssl
   - phantomjs
+  - postgresql
   - rbenv
   - rbenv-default-gems
   - readline
   - redis
   - ruby-build
+  - sl
   - the_silver_searcher
   - tig
   - tmux
   - tree
   - vim
+  - watch
   - wget
 
