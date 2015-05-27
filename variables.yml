@@ -15,21 +15,26 @@ dotfiles:
 homebrew_package_names:
   - cmake
   - gnu-sed
+  - git-now
   - hub
   - icu4c
   - imagemagick
   - jq
+  - maven
   - memcached
   - mysql
   - node
   - openssl
+  - phantomjs
   - rbenv
   - rbenv-default-gems
   - readline
   - redis
   - ruby-build
+  - the_silver_searcher
   - tig
   - tmux
   - tree
   - vim
+  - wget
 
