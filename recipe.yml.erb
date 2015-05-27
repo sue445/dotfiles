@@ -38,6 +38,12 @@ resources:
     key: com.apple.sound.beep.feedback
     value: 1
   - type: defaults
+    domain: com.apple.finder
+    key: AppleShowAllFiles
+    value: "TRUE"
+    notify:
+      - restart_finder
+  - type: defaults
     key: AppleKeyboardUIMode
     value: 3 # Allow full keyboard access
   - type: git
@@ -48,4 +54,7 @@ handlers:
   - id: restart_dock
     type: command
     script: killall Dock
+  - id: restart_finder
+    type: command
+    script: killall Finder
 
