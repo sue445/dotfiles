@@ -38,32 +38,16 @@ filetype off
 
 NeoBundle 'AutoComplPop'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'chrismetcalf/vim-taglist'
-NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'h1mesuke/unite-outline'
-NeoBundle 'itchyny/calendar.vim'
 NeoBundle 'matchit.zip'
 NeoBundle 'mattn/benchvimrc-vim'
-NeoBundle 'mattn/habatobi-vim'
-NeoBundle 'mattn/mkdpreview-vim'
-NeoBundle 'mattn/webapi-vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'othree/eregex.vim'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'skwp/vim-rspec.git'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'taka84u9/vim-ref-ri'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'thinca/vim-ref'
 NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-pathogen'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'vim-ruby/vim-ruby'
+"NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
-NeoBundle 'yuroyoro/monday'
 
 autocmd!
 filetype plugin indent on
@@ -74,14 +58,6 @@ map ¥ <leader>
 
 "<C-Space>でomni補完
 imap <C-Space> <C-x><C-o>
-
-" Cmd+Shift+9
-map <D-9> :RunSpec<cr>
-" Cmd+Shift+0
-map <D-9> :RunSpecLine<cr>
-" :source $VIMRUNTIMEmacros/matchit.vim
-:source ~/.vim/bundle/matchit.zip/plugin/matchit.vim
-let g:ruby_refactoring_map_keys=1
 
 " 括弧の後ろを自動で補完する
 " ref. http://d.hatena.ne.jp/babie/20110130/1296348203
@@ -141,46 +117,6 @@ let NERDSpaceDelims = 1
 nmap <Leader>c <Plug>NERDCommenterToggle
 vmap <Leader>c <Plug>NERDCommenterToggle
 
-" for RSpec TDD
-" ref. http://qiita.com/items/69035c454de416849b8a
-
-" quickrunの出力結果にAnsiEscを実行して色付けする
-autocmd FileType quickrun AnsiEsc
-
-" quickrunの実行モジュールをvimprocに設定する
-let g:quickrun_config = {}
-let g:quickrun_config._ = {'runner' : 'vimproc'}
-
-" rspecを実行するための設定を定義する
-" %cはcommandに設定した値に置換される
-" %oはcmdoptに設定した値に置換される
-" %sはソースファイル名に置換される
-let g:quickrun_config['rspec/bundle'] = {
-  \ 'type': 'rspec/bundle',
-  \ 'command': 'rspec',
-  \ 'outputter': 'buffer',
-  \ 'exec': 'bundle exec %c %o --color --drb --tty %s'
-  \}
-let g:quickrun_config['rspec/normal'] = {
-  \ 'type': 'rspec/normal',
-  \ 'command': 'rspec',
-  \ 'outputter': 'buffer',
-  \ 'exec': '%c %o --color --drb --tty %s'
-  \}
-
-" :QuickRunで実行されるコマンドをrspec用の定義に設定する
-" <Leader>lrをタイプした時に、:QuickRun -cmdopt "-l (カーソル行)"を実行するキーマップを定義する ← これがポイント
-function! RSpecQuickrun()
-  let b:quickrun_config = {'type' : 'rspec/bundle'}
-  " nnoremap <expr><silent> <Leader>lr "<Esc>:QuickRun -cmdopt \"-l " . line(".") . "\"<CR>"
-
-  " Quick JUnitのようにCommand-0でテストを実行する
-  nnoremap <expr><silent> <D-0> "<Esc>:QuickRun -cmdopt \"-l " . line(".") . "\"<CR>"
-endfunction
-
-" ファイル名が_spec.rbで終わるファイルを読み込んだ時に上記の設定を自動で読み込む
-autocmd BufReadPost *_spec.rb call RSpecQuickrun()
-
 " タブはスペース2つでインデントする
 set tabstop=2
 set autoindent
@@ -210,21 +146,4 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=235
 " ref. http://d.hatena.ne.jp/over80/20080907/1220794834
 set encoding=utf-8
 set fileencodings=utf-8,cp932,sjis,euc-jp,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213
-
-" vim-shellのショートカット
-" ref. http://d.hatena.ne.jp/nauthiz/20101107/1289140518
-" ,is: シェルを起動
-nnoremap <silent> ,is :VimShell<CR>
-" ,ipy: pythonを非同期で起動
-nnoremap <silent> ,ipy :VimShellInteractive python<CR>
-" ,irb: irbを非同期で起動
-nnoremap <silent> ,irb :VimShellInteractive irb<CR>
-" ,ss: 非同期で開いたインタプリタに現在の行を評価させる
-vmap <silent> ,ss :VimShellSendString<CR>
-" 選択中に,ss: 非同期で開いたインタプリタに選択行を評価させる
-nnoremap <silent> ,ss <S-v>:VimShellSendString<CR>
-
-" ref. http://d.hatena.ne.jp/itchyny/20140108/1389164688
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
 
