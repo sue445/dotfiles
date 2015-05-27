@@ -72,5 +72,5 @@ function gem(){
     fi
 }
 
-source ~/dotfiles/iterm_colorize_ssh.sh
+source ~/dotfiles/scripts/iterm_colorize_ssh.sh
 
