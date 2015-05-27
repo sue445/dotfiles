@@ -36,14 +36,6 @@ NeoBundleCheck
 set nocompatible
 filetype off
 
-if has("win32") || has("win64")
-  set rtp+=~/vimfiles/vundle.git/
-  call vundle#rc('~/vimfiles/bundle/')
-else
-  set rtp+=~/.vim/vundle.git/
-  call vundle#rc()
-endif
-
 Bundle 'AutoComplPop'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc'
