@@ -1,7 +1,16 @@
 #!/bin/bash
 
+# run servetkit
+#
 # USAGE
 # ./kit.sh <command>
 
-sudo bundle exec serverkit $1 recipe.yml.erb --variables=variables.yml
+if [ -n "$1" ]; then
+  COMMAND=$1
+else
+  # default command is "apply"
+  COMMAND="apply"
+fi
+
+sudo bundle exec serverkit $COMMAND recipe.yml.erb --variables=variables.yml
 
