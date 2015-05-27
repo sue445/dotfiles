@@ -79,24 +79,6 @@ function! ClosePair(char)
   endif
 endf
 
-" erbの閉じ括弧を補完する
-" ref. http://d.hatena.ne.jp/yamitzky/20111213/1323739808
-inoremap <expr> % Lt_Percent_Completion()
-function! Lt_Percent_Completion()
-  if matchstr(getline('.'), '.', col('.') -1 ) == ">"
-    return "\%\%\<Left>"
-  else
-    return "\%"
-  end
-endf
-
-" xmlなどの閉じタグを自動補完する
-augroup MyXML
-  autocmd!
-  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
-  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
-augroup END
-
 " 引数なしでvimを開いたらNERDTreeを起動、引数ありならNERDTreeは起動しない
 " ref. http://kokukuma.blogspot.jp/2011/12/vim-essential-plugin-nerdtree.html
 let file_name = expand("%")
