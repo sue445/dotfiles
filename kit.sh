@@ -12,5 +12,5 @@ else
   COMMAND="apply"
 fi
 
-sudo bundle exec serverkit $COMMAND recipe.yml.erb --variables=variables.yml
+bundle exec serverkit $COMMAND recipe.yml.erb --variables=variables.yml
 
