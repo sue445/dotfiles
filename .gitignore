@@ -1,3 +1,4 @@
 /vimfiles/bundle/
 *.swp
 .DS_Store
+*.un~
