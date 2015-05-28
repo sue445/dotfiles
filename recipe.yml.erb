@@ -5,6 +5,10 @@ resources:
   - type: homebrew_package
     name: <%= homebrew_package_name %>
   <%- end -%>
+  <%- homebrew_tap_names.each do |homebrew_tap_name| -%>
+  - type: homebrew_tap
+    name: <%= homebrew_tap_name %>
+  <%- end -%>
   <%- atom_package_names.each do |atom_package_name| -%>
   - type: atom_package
     name: <%= atom_package_name %>

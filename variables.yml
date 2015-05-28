@@ -33,4 +33,6 @@ homebrew_package_names:
   - vim
   - watch
   - wget
+homebrew_tap_names:
+  - gapple/services
 
