@@ -3,15 +3,6 @@ atom_package_names:
   - language-slim
   - sort-lines
   - vim-mode
-dotfiles:
-  - .atom/keymap.cson
-  - .gemrc
-  - .gitconfig
-  - .gitexcludes
-  - .gitignore
-  - .rbenv/default-gems
-  - .tigrc
-  - .tmux.conf
 homebrew_package_names:
   - cmake
   - git-now
