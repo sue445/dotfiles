@@ -42,6 +42,8 @@ resources:
     domain: com.apple.screencapture
     key: location
     value: ~/Downloads
+    notify:
+      - restart_system_ui_server
   - type: defaults
     key: com.apple.sound.beep.feedback
     value: 1
@@ -65,4 +67,7 @@ handlers:
   - id: restart_finder
     type: command
     script: killall Finder
+  - id: restart_system_ui_server
+    type: command
+    script: killall SystemUIServer
 
