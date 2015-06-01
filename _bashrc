@@ -67,10 +67,8 @@ if [ -n "$RBENV_ROOT" -o -f "$HOME/.rbenv/shims/gem" ] ; then
       $HOME/.rbenv/shims/gem $*
     fi
 
-    if [ $EXISTS_RBENV == 1 ]; then
-      if [ "$1" = "install" ] || [ "$1" = "i" ] || [ "$1" = "uninstall" ] || [ "$1" = "uni" ]; then
-        rbenv rehash
-      fi
+    if [ "$1" = "install" ] || [ "$1" = "i" ] || [ "$1" = "uninstall" ] || [ "$1" = "uni" ]; then
+      rbenv rehash
     fi
   }
 fi
