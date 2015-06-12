@@ -24,12 +24,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Note: You don't set neobundle setting in .gvimrc!
 
 NeoBundle 'AutoComplPop'
-<<<<<<< Updated upstream
-NeoBundle 'Shougo/unite.vim'
-=======
-"NeoBundle 'Shougo/unite.vim'
-"NeoBundle 'h1mesuke/unite-outline'
->>>>>>> Stashed changes
 NeoBundle 'matchit.zip'
 NeoBundle 'mattn/benchvimrc-vm'
 NeoBundle 'mattn/unite-outline'
