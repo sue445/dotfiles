@@ -11,3 +11,8 @@ ln -s ~/dotfiles/_vimrc     ~/.vimrc
 ln -s ~/dotfiles/_rbenv/default-gems ~/.rbenv/default-gems
 
 cp -i ~/dotfiles/_gitconfig.local.example ~/.gitconfig.local
+
+if [ ! -e ~/.vim/bundle/neobundle.vim ]; then
+  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+fi
+
