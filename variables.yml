@@ -4,6 +4,7 @@ atom_package_names:
   - sort-lines
   - vim-mode
 homebrew_package_names:
+  - caskroom/cask/brew-cask
   - cmake
   - git-now
   - gnu-getopt
@@ -34,6 +35,9 @@ homebrew_package_names:
   - vim
   - watch
   - wget
+homebrew_cask_package_names:
+  - vagrant
+  - virtualbox
 homebrew_tap_names:
   - gapple/services
 
