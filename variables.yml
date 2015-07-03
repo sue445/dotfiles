@@ -36,6 +36,15 @@ homebrew_package_names:
   - watch
   - wget
 homebrew_cask_package_names:
+  - atom
+  - dropbox
+  - firefox
+  - google-chrome
+  - google-japanese-ime
+  - gyazo
+  - iterm2
+  - licecap
+  - slack
   - vagrant
   - virtualbox
 homebrew_tap_names:
