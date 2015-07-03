@@ -39,6 +39,7 @@ homebrew_cask_package_names:
   - dropbox
   - firefox
   - google-chrome
+  - google-drive
   - google-japanese-ime
   - gyazo
   - iterm2
