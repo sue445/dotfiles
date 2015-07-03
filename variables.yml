@@ -47,6 +47,7 @@ homebrew_cask_package_names:
   - slack
   - vagrant
   - virtualbox
+  - xtrafinder
 homebrew_tap_names:
   - gapple/services
 
