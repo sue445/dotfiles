@@ -1,6 +1,7 @@
 # editor cache
 *.swp
 *.orig
+*.un~
 
 # OS cache file
 .DS_Store
