@@ -30,6 +30,9 @@ alias ta='tig --all'
 alias tm='(tmux list-sessions || tmux) && tmux a'
 alias v='vim'
 
+# ref. http://qiita.com/kawaz/items/92457e3d1664383b18bc
+HISTTIMEFORMAT='%Y-%m-%dT%T%z '
+
 function __show_errorcode() {
   ERR=$?
   if [ $ERR != 0 ]; then
