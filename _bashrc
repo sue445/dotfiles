@@ -35,10 +35,19 @@ HISTTIMEFORMAT='%Y-%m-%dT%T%z '
 
 function __show_errorcode() {
   ERR=$?
-  if [ $ERR != 0 ]; then
-    echo -en "\033[31m✘ $ERR"
+
+  if [ -n "$LEGACY_MODE" ] ; then
+    if [ $ERR != 0 ]; then
+      echo -en "EG $ERR"
+    else
+      echo -en "OK"
+    fi
   else
-    echo -en "\033[32m✓"
+    if [ $ERR != 0 ]; then
+      echo -en "\033[31m✘ $ERR"
+    else
+      echo -en "\033[32m✓"
+    fi
   fi
 }
 function __ps1_hostname() {
@@ -57,9 +66,18 @@ source ~/dotfiles/vendor/bash_completion.d/git-completion.bash
 __git_complete g __git_main
 GIT_PS1_SHOWDIRTYSTATE=true
 
-export PS1='
+if [ -n "$LEGACY_MODE" ] ; then
+  export PS1='
+[$(__ps1_username)@$(__ps1_hostname)] $(__show_errorcode) \w$(__git_ps1)
+[$(__ps1_username)@$(__ps1_hostname)] [$(date +"%m-%d %H:%M:%S")] $ '
+
+else
+  export PS1='
 [$(__ps1_username)@$(__ps1_hostname)] $(__show_errorcode) \[\033[33m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]
 [$(__ps1_username)@$(__ps1_hostname)] \[\033[32m\][$(date +"%m-%d %H:%M:%S")]\[\033[0m\] $ '
+
+fi
+
 
 if [ -n "$RBENV_ROOT" -o -f "$HOME/.rbenv/shims/gem" ] ; then
   # via. http://rhysd.hatenablog.com/entry/20120226/1330265121
