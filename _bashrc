@@ -38,9 +38,9 @@ function __show_errorcode() {
 
   if [ -n "$LEGACY_MODE" ] ; then
     if [ $ERR != 0 ]; then
-      echo -en "EG $ERR"
+      echo -en "x $ERR"
     else
-      echo -en "OK"
+      echo -en "o"
     fi
   else
     if [ $ERR != 0 ]; then
