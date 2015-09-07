@@ -19,6 +19,7 @@ homebrew_package_names:
   - mysql
   - node
   - openssl
+  - percona-toolkit
   - phantomjs
   - postgresql
   - rbenv
