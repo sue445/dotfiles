@@ -36,5 +36,6 @@ EOF
   }
 
   alias ssh=ssh_iterm
+  alias _ssh=/usr/bin/ssh
   #compdef _ssh ssh_iterm=ssh
  fi
