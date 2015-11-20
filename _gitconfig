@@ -49,7 +49,7 @@
   dry-merge = merge --no-commit --no-ff
   mt = mergetool
   ds = diff --stat
-  ch = cherry-pick
+  ch = cherry-pick -x
 
 # ref. http://qiita.com/janus_wel/items/45275f5fbc3823fa698f
 [alias]
