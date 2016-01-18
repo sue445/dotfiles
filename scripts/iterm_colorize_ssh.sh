@@ -31,11 +31,11 @@ EOF
   }
 
   function ssh_iterm() {
-      new_tab "clear; /usr/bin/ssh $@; exit" "$@"
+      new_tab "clear; /usr/local/bin/ssh $@; exit" "$@"
       set_term_bgcolor 80 0 0
   }
 
   alias ssh=ssh_iterm
-  alias _ssh=/usr/bin/ssh
+  alias _ssh=/usr/local/bin/ssh
   #compdef _ssh ssh_iterm=ssh
  fi

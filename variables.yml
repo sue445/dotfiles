@@ -18,6 +18,7 @@ homebrew_package_names:
   - memcached
   - mysql
   - node
+  - openssh
   - openssl
   - percona-toolkit
   - phantomjs
