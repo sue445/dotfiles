@@ -25,15 +25,15 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'AutoComplPop'
 NeoBundle 'matchit.zip'
-NeoBundle 'mattn/benchvimrc-vm'
-NeoBundle 'mattn/unite-outline'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'othree/eregex.vim'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-endwise'
+NeoBundle 'mattn/benchvimrc-vm', {'type__protocol' : 'ssh' }
+NeoBundle 'mattn/unite-outline', {'type__protocol' : 'ssh' }
+NeoBundle 'nathanaelkane/vim-indent-guides', {'type__protocol' : 'ssh' }
+NeoBundle 'othree/eregex.vim', {'type__protocol' : 'ssh' }
+NeoBundle 'scrooloose/nerdcommenter', {'type__protocol' : 'ssh' }
+NeoBundle 'scrooloose/nerdtree', {'type__protocol' : 'ssh' }
+NeoBundle 'tpope/vim-endwise', {'type__protocol' : 'ssh' }
 "NeoBundle 'tpope/vim-pathogen'
-NeoBundle 'vim-scripts/AnsiEsc.vim'
+NeoBundle 'vim-scripts/AnsiEsc.vim', {'type__protocol' : 'ssh' }
 
 call neobundle#end()
 
