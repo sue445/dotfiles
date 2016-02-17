@@ -22,16 +22,16 @@ resources:
     value: 1
     notify:
       - restart_dock
-  - type: defaults
-    domain: com.apple.screencapture
-    key: type
-    value: png
-  - type: defaults
-    domain: com.apple.screencapture
-    key: location
-    value: ~/Downloads
-    notify:
-      - restart_system_ui_server
+#  - type: defaults
+#    domain: com.apple.screencapture
+#    key: type
+#    value: png
+#  - type: defaults
+#    domain: com.apple.screencapture
+#    key: location
+#    value: ~/Downloads
+#    notify:
+#      - restart_system_ui_server
   - type: defaults
     key: com.apple.sound.beep.feedback
     value: 1
