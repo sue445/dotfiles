@@ -26,6 +26,7 @@ homebrew_package_names:
   - postgresql
   - rbenv
   - rbenv-default-gems
+  - rbenv-gemset
   - readline
   - redis
   - ruby-build
