@@ -21,6 +21,7 @@ homebrew_package_names:
   - node
   - openssh
   - openssl
+  - packer
   - percona-toolkit
   - phantomjs
   - postgresql
@@ -31,6 +32,7 @@ homebrew_package_names:
   - redis
   - ruby-build
   - sl
+  - terraform
   - the_silver_searcher
   - tig
   - tmux
