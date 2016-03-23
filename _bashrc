@@ -97,3 +97,4 @@ fi
 
 source ~/dotfiles/scripts/iterm_colorize_ssh.sh
 
+export MAVEN_OPTS="-Djava.net.preferIPv4Stack=true"
