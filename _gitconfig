@@ -54,6 +54,11 @@
   ds = diff --stat
   ch = cherry-pick -x
 
+# fetch pull request branch
+# ref. http://sinsoku.hatenablog.com/entry/2016/01/05/124957
+[alias]
+  fe-pr = "!f() { git fetch origin pull/$1/head:pr/$1; }; f"
+
 # ref. http://qiita.com/masarakki/items/27f2cb456b4801ccb31b
 [alias]
   sync = !~/dotfiles/scripts/git-sync.sh
