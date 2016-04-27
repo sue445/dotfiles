@@ -100,6 +100,6 @@ source ~/dotfiles/scripts/iterm_colorize_ssh.sh
 export MAVEN_OPTS="-Djava.net.preferIPv4Stack=true"
 
 # Use ssh agent forwarding
-if [ -f ~/.ssh/id_rsa ]; then
-  ssh-add ~/.ssh/id_rsa 2>/dev/null
-fi
+#if [ -f ~/.ssh/id_rsa ]; then
+#  ssh-add ~/.ssh/id_rsa 2>/dev/null
+#fi
