@@ -37,3 +37,6 @@ vendor/bundle/
 
 # LibreOffice temp file
 .~lock.*#
+
+# Vagrant
+.vagrant/
