@@ -18,5 +18,5 @@ fi
 
 if [ ! -e ~/.bash_profile ]; then
   echo "source ~/.bashrc" >> ~/.bash_profile
-  source ~/.bash_profile
+  echo "Please run `source ~/.bash_profile`"
 fi
