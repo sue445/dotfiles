@@ -16,3 +16,7 @@ if [ ! -e ~/.vim/bundle/neobundle.vim ]; then
   git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
 
+if [ ! -e ~/.bash_profile ]; then
+  echo "source ~/.bashrc" >> ~/.bash_profile
+  source ~/.bash_profile
+fi
