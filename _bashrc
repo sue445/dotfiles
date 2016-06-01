@@ -95,7 +95,7 @@ if [ -n "$RBENV_ROOT" -o -f "$HOME/.rbenv/shims/gem" ] ; then
 fi
 
 
-source ~/dotfiles/scripts/iterm_colorize_ssh.sh
+#source ~/dotfiles/scripts/iterm_colorize_ssh.sh
 
 export MAVEN_OPTS="-Djava.net.preferIPv4Stack=true"
 
