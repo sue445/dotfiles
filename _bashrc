@@ -97,7 +97,9 @@ fi
 #source ~/dotfiles/scripts/iterm_colorize_ssh.sh
 
 export MAVEN_OPTS="-Djava.net.preferIPv4Stack=true"
-export PATH="~/dotfiles/bin:${PATH}"
+
+HOME_DIR=$(cd ~/ && pwd)
+export PATH="${HOME_DIR}/dotfiles/bin:${PATH}"
 
 # Use ssh agent forwarding
 #if [ -f ~/.ssh/id_rsa ]; then
