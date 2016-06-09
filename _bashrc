@@ -23,7 +23,6 @@ alias bi-vendor='bundle install --path vendor/bundle --jobs 2'
 alias g='git'
 alias gs='git status -sb'
 alias h='hub'
-alias rake-dev='~/dotfiles/scripts/rake-dev.sh'
 alias re='rbenv'
 alias t='tig'
 alias ta='tig --all'
@@ -98,6 +97,7 @@ fi
 #source ~/dotfiles/scripts/iterm_colorize_ssh.sh
 
 export MAVEN_OPTS="-Djava.net.preferIPv4Stack=true"
+export PATH="~/dotfiles/bin:${PATH}"
 
 # Use ssh agent forwarding
 #if [ -f ~/.ssh/id_rsa ]; then
