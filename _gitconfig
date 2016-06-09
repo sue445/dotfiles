@@ -61,8 +61,7 @@
 
 # ref. http://qiita.com/masarakki/items/27f2cb456b4801ccb31b
 [alias]
-  sync = !~/dotfiles/scripts/git-sync.sh
-  sy = !git sync
+  sy = sync
 
 # ref. http://qiita.com/janus_wel/items/45275f5fbc3823fa698f
 [alias]
