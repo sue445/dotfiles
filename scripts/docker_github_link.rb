@@ -11,7 +11,10 @@ remote_branches =
 
 # generate GitHub link from remote url
 fetch_line = `git remote -v`.lines.first
+
 fetch_line =~ %r{git@github\.com:(.+)/(.+)\.git}
+fetch_line =~ %r{ssh://git@github\.com/(.+)/(.+)\.git} unless Regexp.last_match
+
 github_url = "https://github.com/#{Regexp.last_match[1]}/#{Regexp.last_match[2]}"
 
 # generate markdown format links
