@@ -16,6 +16,10 @@ if [ ! -e ~/.vim/bundle/neobundle.vim ]; then
   git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
 
+if [ ! -e ~/.tmux/plugins/tpm ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
 if [ ! -e ~/.bash_profile ]; then
   echo "source ~/.bashrc" >> ~/.bash_profile
   echo "Please run 'source ~/.bash_profile'"
