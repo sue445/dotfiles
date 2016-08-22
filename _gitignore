@@ -30,6 +30,8 @@ build/
 # Ruby
 vendor/bundle/
 .bundle/
+gemfiles/*.lock
+gemfiles/vendor/
 
 ## rbenv
 .ruby-version
