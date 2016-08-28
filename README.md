@@ -13,6 +13,13 @@ vi ~/.gitconfig.local
 
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 # :NeoBundleInstall
+
+source ~/.bash_profile
+
+tm
+
+# Install tmux plugin
+prefix + I
 ```
 
 #### curl
