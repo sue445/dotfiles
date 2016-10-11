@@ -93,6 +93,9 @@ if [ -n "$RBENV_ROOT" -o -f "$HOME/.rbenv/shims/gem" ] ; then
   }
 fi
 
+function repo(){
+  cd $(ghq list -p | peco)
+}
 
 #source ~/dotfiles/scripts/iterm_colorize_ssh.sh
 
