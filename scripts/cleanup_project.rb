@@ -34,10 +34,10 @@ def remove_dir(path)
   dir_size = directory_size(path)
 
   if RUN_FLAG
-    puts "[remove] #{dir_size}MB #{path}"
+    puts "#{dir_size}MB #{path} [remove]"
     FileUtils.rm_rf(path)
   else
-    puts "[dry-run] #{dir_size}MB #{path}"
+    puts "#{dir_size}MB #{path} [dry-run]"
   end
 end
 
