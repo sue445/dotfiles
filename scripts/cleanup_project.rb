@@ -31,12 +31,20 @@ def remove_dir(path)
   return unless path.exist?
   return unless path.directory?
 
+  dir_size = directory_size(path)
+
   if RUN_FLAG
-    puts "[remove] #{path}"
+    puts "[remove] #{dir_size}MB #{path}"
     FileUtils.rm_rf(path)
   else
-    puts "[dry-run] #{path}"
+    puts "[dry-run] #{dir_size}MB #{path}"
   end
+end
+
+def directory_size(path)
+  result = `du -sm #{path}`
+  result =~ /^([0-9]+)/
+  $1.to_i
 end
 
 run
