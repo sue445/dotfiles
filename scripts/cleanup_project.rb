@@ -21,6 +21,7 @@ def cleanup_workspace(workspace_path)
   remove_dir(workspace_path.join("log"))
   remove_dir(workspace_path.join("vendor/bundle"))
   remove_dir(workspace_path.join("gemfiles/bundle"))
+  remove_dir(workspace_path.join("pkg"))
 
   # jenkins plugin
   remove_dir(workspace_path.join("target"))
