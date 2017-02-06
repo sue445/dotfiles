@@ -95,7 +95,7 @@ fi
 
 function repo(){
   if [ $(ghq list --full-path "$1" | wc -l) = "1" ]; then
-    ghq look $1
+    cd $(ghq list --full-path "$1")
   else
     cd $(ghq list --full-path "$1" | peco)
   fi
