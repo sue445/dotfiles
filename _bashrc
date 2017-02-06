@@ -94,10 +94,10 @@ if [ -n "$RBENV_ROOT" -o -f "$HOME/.rbenv/shims/gem" ] ; then
 fi
 
 function repo(){
-  if [ $(ghq list -p "$1" | wc -l) = "1" ]; then
+  if [ $(ghq list --full-path "$1" | wc -l) = "1" ]; then
     ghq look $1
   else
-    cd $(ghq list -p "$1" | peco)
+    cd $(ghq list --full-path "$1" | peco)
   fi
 }
 
