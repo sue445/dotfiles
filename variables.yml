@@ -41,6 +41,7 @@ homebrew_package_names:
   - vim
   - watch
   - wget
+  - yarn
 homebrew_cask_package_names:
   - atom
   - dropbox
