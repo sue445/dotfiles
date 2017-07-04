@@ -3,7 +3,7 @@
 
 require "json"
 
-rubocop_result = JSON.parse(`rubocop --display-cop-names --format=json`)
+rubocop_result = JSON.parse(`rubocop --format=json`)
 
 cop_names = []
 rubocop_result["files"].each do |file|
