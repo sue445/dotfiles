@@ -12,8 +12,12 @@ end
 cop_names = cop_names.sort.uniq
 
 cop_names.each do |cop_name|
-  command = "rubocop --auto-correct --only #{cop_name}"
+  # Depending on the execution order, there is a possibility that the offences may increase.
+  # So it is executed twice
+  2.times do
+    command = "rubocop --auto-correct --only #{cop_name}"
 
-  ret = system command
-  system "git commit -am '#{command}'" if ret
+    ret = system command
+    system "git commit -am '#{command}'" if ret
+  end
 end
