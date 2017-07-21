@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!/bin/bash -x
 
 # via. https://gist.github.com/JeffBelback/5687bb02f3618965ca8f
 
