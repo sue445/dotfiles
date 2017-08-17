@@ -18,6 +18,6 @@ cop_names.each do |cop_name|
     command = "rubocop --auto-correct --only #{cop_name}"
 
     ret = system command
-    system "git commit -am '#{command}'" if ret
+    system "git commit -am ':cop: #{command}'" if ret
   end
 end
