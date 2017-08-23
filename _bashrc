@@ -108,6 +108,8 @@ export MAVEN_OPTS="-Djava.net.preferIPv4Stack=true"
 HOME_DIR=$(cd ~/ && pwd)
 export PATH="${HOME_DIR}/dotfiles/bin:${PATH}"
 
+export DISABLE_SPRING=1
+
 # Use ssh agent forwarding
 #if [ -f ~/.ssh/id_rsa ]; then
 #  ssh-add ~/.ssh/id_rsa 2>/dev/null
