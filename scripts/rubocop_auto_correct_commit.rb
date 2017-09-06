@@ -7,9 +7,10 @@ DEFAULT_ORDER = 100
 
 # --auto-correctする時の実行順(数字が小さい方が先に実行される)
 COP_ORDERS = {
-  # Style/UnneededPercentQはStyle/StringLiteralsのようにシングルクオーテーション優先かダブルクオーテーション優先のような
-  # configがないので、Style/StringLiteralsでダブルクオーテーションにした後でStyle/UnneededPercentQでシングルクオーテーション
-  # になると二度手間になってしまうので先にStyle/UnneededPercentQを実行した方がいい
+  # Style/UnneededPercentQはStyle/StringLiteralsのようにシングルクオーテーション優先かダブルクオーテーション優先のようなconfigがない
+  # https://github.com/bbatsov/rubocop/blob/v0.49.1/lib/rubocop/cop/style/unneeded_percent_q.rb
+  # Style/StringLiteralsでダブルクオーテーションにした後でStyle/UnneededPercentQでシングルクオーテーション
+  # になると再度Style/StringLiteralsをかける必要があり二度手間になってしまうので先にStyle/UnneededPercentQを実行した方がいい
   "Style/UnneededPercentQ" => 50,
 }.tap { |hash| hash.default = DEFAULT_ORDER }
 
