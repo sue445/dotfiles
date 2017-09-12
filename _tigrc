@@ -14,6 +14,6 @@ bind generic G move-last-line
 bind main    R !git rebase -i %(commit)
 bind diff    R !git rebase -i %(commit)
 
-# main viewの左端にコミットIDを表示する
+# main viewにコミットIDを表示する
 # via. http://qiita.com/yoshikazusawa/items/d99e8b5d6f6a45aa6e2e
-set main-view = id date author commit-title:graph=yes,refs=yes
+set main-view = date id author commit-title:graph=yes,refs=yes
