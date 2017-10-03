@@ -19,6 +19,7 @@ end
 def cleanup_workspace(workspace_path)
   # ruby
   remove_dir(workspace_path.join("log"))
+  remove_dir(workspace_path.join("spec/dummy/log"))
   remove_dir(workspace_path.join("vendor/bundle"))
   remove_dir(workspace_path.join("gemfiles/bundle"))
   remove_dir(workspace_path.join("pkg"))
