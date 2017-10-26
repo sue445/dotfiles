@@ -5,9 +5,9 @@ if [ $? -eq 0 ]; then
   # Use GNU sed instead of BSD sed (for Mac)
   # * BSD sed: preinstalled in Mac
   # * GNU sed: brew install GNU-sed
-  SED=gsed
+  readonly SED=gsed
 else
-  SED=sed
+  readonly SED=sed
 fi
 
 function run_and_commit() {
