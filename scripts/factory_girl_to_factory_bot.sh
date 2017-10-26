@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 type gsed
 if [ $? -eq 0 ]; then
