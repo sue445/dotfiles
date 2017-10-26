@@ -14,7 +14,7 @@ function run_and_commit() {
   local command=$1
   sh -c "$command"
 
-  `git status` | grep "nothing to commit, working directory clean"
+  git status | grep "nothing to commit, working directory clean"
 
   if [ $? -ne 0 ]; then
     git commit -am "$command"
