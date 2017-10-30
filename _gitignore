@@ -42,3 +42,6 @@ gemfiles/vendor/
 
 # Vagrant
 .vagrant/
+
+# terraform
+.terraform/
