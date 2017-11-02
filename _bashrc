@@ -28,6 +28,7 @@ alias t='tig'
 alias ta='tig --all'
 alias tm='(tmux list-sessions || tmux -u) && tmux -u a'
 alias v='vim'
+alias tf='terraform'
 
 # ref. http://qiita.com/kawaz/items/92457e3d1664383b18bc
 HISTTIMEFORMAT='%Y-%m-%dT%T%z '
