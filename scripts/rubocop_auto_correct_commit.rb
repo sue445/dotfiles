@@ -14,6 +14,10 @@ COP_ORDERS = {
   "Style/UnneededPercentQ" => 50,
 }.tap { |hash| hash.default = DEFAULT_ORDER }
 
+EXCLUDE_COPS = {
+  "Lint/UnneededDisable" => "Lint/UnneededDisable can not be used with --only.",
+}
+
 # Depending on the execution order, there is a possibility that the offences may increase.
 # So it is executed twice
 2.times do
@@ -28,6 +32,11 @@ COP_ORDERS = {
   cop_names = cop_names.uniq.sort_by { |cop_name| [COP_ORDERS[cop_name], cop_name] }
 
   cop_names.each do |cop_name|
+    if EXCLUDE_COPS.keys.include?(cop_name)
+      puts EXCLUDE_COPS[cop_name]
+      next
+    end
+
     command = "rubocop --auto-correct --only #{cop_name}"
 
     ret = system command
