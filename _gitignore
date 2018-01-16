@@ -45,3 +45,6 @@ gemfiles/vendor/
 
 # terraform
 .terraform/
+
+# Others
+.env
