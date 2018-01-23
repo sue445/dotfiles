@@ -17,7 +17,7 @@ function run_and_commit() {
   git status | grep "nothing to commit, working directory clean"
 
   if [ $? -ne 0 ]; then
-    git commit -am "$command"
+    git commit -am ":factory: $command"
   fi
 }
 
