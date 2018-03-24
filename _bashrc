@@ -30,6 +30,9 @@ alias tm='(tmux list-sessions || tmux -u) && tmux -u a'
 alias v='vim'
 alias tf='terraform'
 
+# c.f. https://github.com/koic/dotfiles/blob/0e00d3b9d968963b5f54326ab3fb186336828895/dot.sh/git.sh#L2
+alias cb='git checkout `git branch | peco | sed -e "s/\* //g" | awk "{print \$1}"`'
+
 # ref. http://qiita.com/kawaz/items/92457e3d1664383b18bc
 HISTTIMEFORMAT='%Y-%m-%dT%T%z '
 
