@@ -37,6 +37,9 @@ gemfiles/vendor/
 .ruby-version
 .rbenv-gemsets
 
+## pyenv
+.python-version
+
 # LibreOffice temp file
 .~lock.*#
 
