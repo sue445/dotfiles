@@ -32,3 +32,6 @@ homebrew:
     - watch
     - wget
     - yarn
+
+  tap_names:
+    - gapple/services
