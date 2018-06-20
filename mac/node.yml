@@ -1,0 +1,34 @@
+homebrew:
+  package_names:
+    - cmake
+    - git-now
+    - gnu-getopt
+    - gnu-sed
+    - go
+    - icu4c
+    - imagemagick
+    - jq
+    # - maven
+    - memcached
+    - mysql
+    - node
+    - openssh
+    - openssl
+    # - packer
+    - peco
+    - postgresql
+    - rbenv
+    - rbenv-default-gems
+    - readline
+    - redis
+    - ruby-build
+    - sl
+    - tfenv
+    - the_silver_searcher
+    - tig
+    - tmux
+    - tree
+    - vim
+    - watch
+    - wget
+    - yarn
