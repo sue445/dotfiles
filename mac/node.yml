@@ -34,7 +34,7 @@ homebrew:
     - yarn
 
   tap_names:
-    - gapple/services
+    # -
 
 go-get:
   - github.com/motemen/ghq
