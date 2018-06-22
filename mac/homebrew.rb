@@ -8,3 +8,9 @@ node[:homebrew][:tap_names].each do |name|
     not_if "brew tap | grep -q '#{name}'"
   end
 end
+
+node[:homebrew][:service_names].each do |name|
+  execute "brew services start #{name}" do
+    only_if "brew services list | grep -E '#{name}\\s+stopped'"
+  end
+end

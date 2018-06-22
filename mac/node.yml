@@ -36,5 +36,11 @@ homebrew:
   tap_names:
     # -
 
+  service_names:
+    - memcached
+    - mysql
+    - postgresql
+    - redis
+
 go-get:
   - github.com/motemen/ghq
