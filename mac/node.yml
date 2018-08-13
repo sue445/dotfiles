@@ -44,3 +44,6 @@ homebrew:
 
 go-get:
   - github.com/motemen/ghq
+
+rbenv-plugins:
+  rbenv-each: "https://github.com/rbenv/rbenv-each.git"
