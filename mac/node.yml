@@ -52,3 +52,4 @@ rbenv-plugins:
 atom-packages:
   - language-review
   - linter-redpen
+  - sublime-style-column-selection
