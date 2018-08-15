@@ -48,3 +48,7 @@ go-get:
 
 rbenv-plugins:
   rbenv-each: "https://github.com/rbenv/rbenv-each.git"
+
+atom-packages:
+  - language-review
+  - linter-redpen
