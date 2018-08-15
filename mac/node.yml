@@ -20,6 +20,7 @@ homebrew:
     - rbenv
     - rbenv-default-gems
     - readline
+    - redpen
     - redis
     - ruby-build
     - sl
