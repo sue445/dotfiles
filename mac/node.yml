@@ -5,6 +5,7 @@ homebrew:
     - gnu-getopt
     - gnu-sed
     - go
+    - heroku/brew/heroku
     - icu4c
     - imagemagick
     - jq
