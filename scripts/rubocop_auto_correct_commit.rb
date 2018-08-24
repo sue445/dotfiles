@@ -21,7 +21,7 @@ EXCLUDE_COPS = {
 # Depending on the execution order, there is a possibility that the offences may increase.
 # So it is executed twice
 2.times do
-  rubocop_result = JSON.parse(`rubocop --format=json`)
+  rubocop_result = JSON.parse(`rubocop --parallel --format=json`)
 
   cop_names = []
   rubocop_result["files"].each do |file|
