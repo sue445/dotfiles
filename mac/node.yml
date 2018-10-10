@@ -1,6 +1,7 @@
 homebrew:
   package_names:
     - cmake
+    - git
     - git-now
     - gnu-getopt
     - gnu-sed
