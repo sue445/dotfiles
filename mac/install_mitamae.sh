@@ -1,6 +1,6 @@
 #!/bin/bash -xe
 
-readonly MITAMAE_VERSION="1.5.6"
+readonly MITAMAE_VERSION="1.6.3"
 
 rm -f bin/*
 
