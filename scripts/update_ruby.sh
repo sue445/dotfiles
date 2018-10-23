@@ -4,7 +4,7 @@ readonly BEFORE_VERSION=$1
 readonly AFTER_VERSION=$2
 
 if [ -z "$BEFORE_VERSION" ] || [ -z "$AFTER_VERSION" ]; then
-  echo "Usage: ruby_update.sh <BEFORE_VERSION> <AFTER_VERSION>"
+  echo "Usage: update_ruby.sh <BEFORE_VERSION> <AFTER_VERSION>"
   exit 1
 fi
 
