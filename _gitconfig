@@ -54,6 +54,7 @@
   ds = diff --stat
   ch = cherry-pick -x
   remote-no-push = "!f() { git remote set-url --push $1 NO_PUSH; }; f"
+  up = update
 
 # fetch pull request branch
 # ref. http://sinsoku.hatenablog.com/entry/2016/01/05/124957
