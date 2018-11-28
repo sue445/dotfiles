@@ -2,6 +2,7 @@ homebrew:
   package_names:
     - circleci
     - cmake
+    - direnv
     - git
     - git-now
     - gnu-getopt
