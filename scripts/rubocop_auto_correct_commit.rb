@@ -1,3 +1,5 @@
+# NOTE: This is deprecated. Use https://github.com/sue445/rubocop_auto_corrector
+
 # `rubocop --auto-correct --only COP` and `git commit`
 # Usage: ruby rubocop_auto_correct_commit.rb
 
