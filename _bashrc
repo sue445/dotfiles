@@ -120,7 +120,7 @@ export DISABLE_SPRING=1
 #  ssh-add ~/.ssh/id_rsa 2>/dev/null
 #fi
 
-type direnv
+type direnv > /dev/null 2>&1
 if [ $? -eq 0 ]; then
   eval "$(direnv hook bash)"
 fi
