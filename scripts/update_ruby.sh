@@ -23,6 +23,6 @@ git grep -l ${BEFORE_VERSION} | grep -v Gemfile.lock | grep -e .ruby-version -e 
 readonly BEFORE_MINOR_VERSION="$(echo $BEFORE_VERSION | cut -d '.' -f 1).$(echo $BEFORE_VERSION | cut -d '.' -f 2)"
 readonly AFTER_MINOR_VERSION="$(echo $AFTER_VERSION | cut -d '.' -f 1).$(echo $AFTER_VERSION | cut -d '.' -f 2)"
 
-git grep -l ${BEFORE_MINOR_VERSION} | grep -e .rubocop.yml | xargs sed ${SED_OPTION} "s/${BEFORE_MINOR_VERSION}/${AFTER_MINOR_VERSION}/g"
+git grep -l ${BEFORE_MINOR_VERSION} | grep -e .rubocop.yml | xargs sed ${SED_OPTION} "s/TargetRubyVersion: ${BEFORE_MINOR_VERSION}/TargetRubyVersion: ${AFTER_MINOR_VERSION}/g"
 
 git commit -am "Upgrade to ruby ${AFTER_VERSION} :gem:"
