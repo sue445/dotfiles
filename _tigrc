@@ -16,6 +16,7 @@ bind diff    R !git rebase -i %(commit)
 
 # c.f. https://qiita.com/sfus/items/063797a1dd8fdc7d032f
 bind main    ! ?git revert %(commit)
+bind diff    ! ?git revert %(commit)
 
 # override cherry-pick
 bind main    C ?git cherry-pick -x %(commit)
