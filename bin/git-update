@@ -9,7 +9,7 @@ fi
 current=`git branch | grep '*' | cut -f 2 -d ' '`
 
 git checkout $master
-git pull --ff-only
+git pull origin $master --ff-only
 
 git checkout $current
 git rebase $master
