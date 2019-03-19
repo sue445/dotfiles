@@ -19,7 +19,7 @@ if [ -z "$BEFORE_VERSION" ] || [ -z "$AFTER_VERSION" ]; then
 fi
 
 git checkout master
-git pull --ff-only
+git pull --ff
 git checkout -b upgrade_ruby_${AFTER_VERSION}
 
 git grep -l ${BEFORE_VERSION} | grep -v Gemfile.lock | grep -e .ruby-version -e Gemfile -e wercker.yml -e .circleci/config.yml -e .gitlab-ci.yml | xargs $SED -i ${SED_OPTION} "s/${BEFORE_VERSION}/${AFTER_VERSION}/g"
