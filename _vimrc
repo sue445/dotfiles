@@ -25,7 +25,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'AutoComplPop'
 NeoBundle 'matchit.zip'
-NeoBundle 'mattn/benchvimrc-vm', {'type__protocol' : 'ssh' }
+NeoBundle 'mattn/benchvimrc-vim', {'type__protocol' : 'ssh' }
 NeoBundle 'mattn/unite-outline', {'type__protocol' : 'ssh' }
 NeoBundle 'nathanaelkane/vim-indent-guides', {'type__protocol' : 'ssh' }
 NeoBundle 'othree/eregex.vim', {'type__protocol' : 'ssh' }
