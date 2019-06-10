@@ -1,5 +1,6 @@
 homebrew:
   package_names:
+    - aws-sam-cli
     - circleci
     - cmake
     - direnv
@@ -39,7 +40,7 @@ homebrew:
     - yarn
 
   tap_names:
-    # -
+    - aws/tap
 
   service_names:
     - memcached
