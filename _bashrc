@@ -107,7 +107,7 @@ function repo(){
 }
 
 # c.f. https://www.mazn.net/blog/2015/12/26/1548.html
-function docker-taglist {
+function dockerhub-taglist {
   curl -s https://registry.hub.docker.com/v1/repositories/$1/tags | jq -r .[].name
 }
 
