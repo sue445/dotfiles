@@ -17,6 +17,7 @@ homebrew:
     - memcached
     - mysql
     - node
+    - nodenv
     - openssh
     - openssl
     # - packer
