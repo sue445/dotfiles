@@ -29,4 +29,6 @@ readonly AFTER_MINOR_VERSION="$(echo $AFTER_VERSION | cut -d '.' -f 1).$(echo $A
 
 git grep -l ${BEFORE_MINOR_VERSION} | grep -e .rubocop.yml | xargs $SED -i "s/TargetRubyVersion: ${BEFORE_MINOR_VERSION}/TargetRubyVersion: ${AFTER_MINOR_VERSION}/g"
 
+bundle install --jobs=$(nproc)  --path vendor/bundle/
+
 git commit -am "Upgrade to ruby ${AFTER_VERSION} :gem:"
