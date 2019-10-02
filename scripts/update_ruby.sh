@@ -22,7 +22,7 @@ git checkout master
 git pull --ff
 git checkout -b upgrade_ruby_${AFTER_VERSION}
 
-git grep -l ${BEFORE_VERSION} | grep -v Gemfile.lock | grep -e .ruby-version -e Gemfile -e wercker.yml -e .circleci/config.yml -e .gitlab-ci.yml | xargs $SED -i ${SED_OPTION} "s/${BEFORE_VERSION}/${AFTER_VERSION}/g"
+git grep -l ${BEFORE_VERSION} | grep -v Gemfile.lock | grep -e .ruby-version -e Gemfile -e wercker.yml -e .circleci/config.yml -e .gitlab-ci.yml -e .github/workflows/ | xargs $SED -i ${SED_OPTION} "s/${BEFORE_VERSION}/${AFTER_VERSION}/g"
 
 readonly BEFORE_MINOR_VERSION="$(echo $BEFORE_VERSION | cut -d '.' -f 1).$(echo $BEFORE_VERSION | cut -d '.' -f 2)"
 readonly AFTER_MINOR_VERSION="$(echo $AFTER_VERSION | cut -d '.' -f 1).$(echo $AFTER_VERSION | cut -d '.' -f 2)"
