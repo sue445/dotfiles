@@ -19,7 +19,8 @@ esac
 # alias mv='mv -i'
 
 alias be='bundle exec'
-alias bi-vendor='bundle install --path vendor/bundle --jobs 2'
+# alias bi-vendor='bundle install --path vendor/bundle --jobs 2'
+alias bi-vendor='bundle install --jobs $(nproc)'
 alias g='git'
 alias gs='git status -sb'
 alias h='hub'
