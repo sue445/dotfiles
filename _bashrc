@@ -19,8 +19,6 @@ esac
 # alias mv='mv -i'
 
 alias be='bundle exec'
-# alias bi-vendor='bundle install --path vendor/bundle --jobs 2'
-alias bi-vendor='bundle config --local path "vendor/bundle" && bundle install --jobs $(nproc)'
 alias g='git'
 alias gs='git status -sb'
 alias h='hub'
@@ -104,6 +102,20 @@ function repo(){
     cd $(ghq list --full-path "$1")
   else
     cd $(ghq list --full-path "$1" | peco)
+  fi
+}
+
+function bi-vendor() {
+  if [ $(bundle -v | grep "Bundler version 1." | wc -l) = "1" ]; then
+    # bundler v1
+    bundle install --jobs $(nproc) --path vendor/bundle
+  elif [ $(bundle -v | grep "Bundler version 2.0." | wc -l) = "1" ]; then
+    # bundler v2.0.x
+    bundle install --jobs $(nproc) --path vendor/bundle
+  else
+    # bundler v2.1+
+    bundle config set --local path "vendor/bundle"
+    bundle install --jobs $(nproc)
   fi
 }
 
