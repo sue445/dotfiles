@@ -129,4 +129,4 @@ set fileencodings=utf-8,cp932,sjis,euc-jp,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucj
 
 filetype on
 syntax on
-
+colorscheme darkblue
