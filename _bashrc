@@ -69,6 +69,11 @@ source ~/dotfiles/vendor/bash_completion.d/git-completion.bash
 __git_complete g __git_main
 GIT_PS1_SHOWDIRTYSTATE=true
 
+if [ -f /usr/local/opt/kube-ps1/share/kube-ps1.sh ]; then
+  # Install from `brew install kube-ps1`
+  source /usr/local/opt/kube-ps1/share/kube-ps1.sh
+fi
+
 if [ -n "$LEGACY_MODE" ] ; then
   export PS1='
 [$(__ps1_username)@$(__ps1_hostname)] $(__show_errorcode) \w$(__git_ps1)
@@ -81,8 +86,12 @@ else
   # c.f. https://github.com/jonmosco/kube-ps1
   type kube_ps1 > /dev/null 2>&1
   if [ $? -eq 0 ]; then
-    ps1="$ps1
-[$(__ps1_username)@$(__ps1_hostname)] $(kube_ps1)"
+    _kube_ps1_get_context_ns
+    __kube_ps1=$(kube_ps1)
+    if [ -n "$__kube_ps1" ]; then
+      ps1="$ps1
+[$(__ps1_username)@$(__ps1_hostname)] $__kube_ps1"
+    fi
   fi
 
   ps1="$ps1
