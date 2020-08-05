@@ -64,6 +64,23 @@ function __ps1_username() {
   exit $err
 }
 
+type _kube_ps1_get_context_ns > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+  _kube_ps1_get_context_ns
+fi
+
+function __kube_ps1() {
+  local err
+
+  # c.f. https://github.com/jonmosco/kube-ps1
+  type kube_ps1 > /dev/null 2>&1
+  if [ $? -eq 0 ]; then
+    kube_ps1
+  fi
+
+  exit $err
+}
+
 source ~/dotfiles/vendor/bash_completion.d/git-prompt.sh
 source ~/dotfiles/vendor/bash_completion.d/git-completion.bash
 __git_complete g __git_main
@@ -80,27 +97,9 @@ if [ -n "$LEGACY_MODE" ] ; then
 [$(__ps1_username)@$(__ps1_hostname)] [$(date +"%m-%d %H:%M:%S")] $ '
 
 else
-  ps1='
-[$(__ps1_username)@$(__ps1_hostname)] $(__show_errorcode) \[\033[33m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]'
-
-  # c.f. https://github.com/jonmosco/kube-ps1
-  type kube_ps1 > /dev/null 2>&1
-  if [ $? -eq 0 ]; then
-    _kube_ps1_get_context_ns
-    __kube_ps1=$(kube_ps1)
-    if [ -n "$__kube_ps1" ]; then
-      ps1="$ps1
-[$(__ps1_username)@$(__ps1_hostname)] $__kube_ps1"
-    fi
-  fi
-
-  ps1="$ps1
-[$(__ps1_username)@$(__ps1_hostname)] \[\033[32m\][$(date +"%m-%d %H:%M:%S")]\[\033[0m\] $ "
-  export PS1=$ps1
-
-#   export PS1='
-# [$(__ps1_username)@$(__ps1_hostname)] $(__show_errorcode) \[\033[33m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]
-# [$(__ps1_username)@$(__ps1_hostname)] \[\033[32m\][$(date +"%m-%d %H:%M:%S")]\[\033[0m\] $ '
+  export PS1='
+[$(__ps1_username)@$(__ps1_hostname)] $(__show_errorcode) \[\033[33m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\] $(__kube_ps1)
+[$(__ps1_username)@$(__ps1_hostname)] \[\033[32m\][$(date +"%m-%d %H:%M:%S")]\[\033[0m\] $ '
 
 fi
 
