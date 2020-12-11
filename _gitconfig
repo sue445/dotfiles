@@ -8,7 +8,7 @@
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
@@ -89,6 +89,10 @@
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
   fp = fetch --prune
   ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >> .gitignore
+
+# ref. https://qiita.com/hajimeni/items/73d2155fc59e152630c4
+[alias]
+  delete-merged-branch = !git branch --merged | egrep -v '\\*|master|development' | xargs git branch -d
 
 [secrets]
   providers = git secrets --aws-provider
