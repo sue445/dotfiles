@@ -92,7 +92,7 @@
 
 # ref. https://qiita.com/hajimeni/items/73d2155fc59e152630c4
 [alias]
-  delete-merged-branch = !git branch --merged | egrep -v '\\*|master|development' | xargs git branch -d
+  delete-merged-branch = !git branch --merged | egrep -v '\\*|master|develop' | xargs git branch -d
 
 [secrets]
   providers = git secrets --aws-provider
