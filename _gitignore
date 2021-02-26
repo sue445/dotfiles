@@ -20,6 +20,9 @@ out/
 .classpath
 .project
 
+## VSCode
+.vscode/
+
 ## gradle
 .gradle/
 build/
