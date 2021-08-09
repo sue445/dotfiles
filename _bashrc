@@ -134,10 +134,15 @@ function bi-vendor() {
   elif [ $(bundle -v | grep "Bundler version 2.0." | wc -l) = "1" ]; then
     # bundler v2.0.x
     bundle install --jobs $(nproc) --path vendor/bundle
-  else
+  elif [ $(bundle -v | grep "Bundler version 2.1." | wc -l) = "1" ]; then
     # bundler v2.1+
     bundle config set --local path "vendor/bundle"
     bundle install --jobs $(nproc)
+  else
+    # bundler v2.2+
+    bundle config set --local path "vendor/bundle"
+    bundle config set --local jobs 8
+    bundle install
   fi
 }
 
