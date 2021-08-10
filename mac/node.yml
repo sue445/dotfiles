@@ -4,6 +4,7 @@ homebrew:
     - circleci
     - cmake
     - direnv
+    - google-cloud-sdk
     - gh
     - git
     - git-now
