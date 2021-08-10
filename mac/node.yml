@@ -25,6 +25,7 @@ homebrew:
     - readline
     - redis
     - sl
+    - sops
     - sshuttle
     - tfenv
     - the_silver_searcher
