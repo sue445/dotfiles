@@ -44,8 +44,8 @@ homebrew:
     - postgresql
     - redis
 
-go-get:
-  - github.com/x-motemen/ghq
+go-packages:
+  github.com/x-motemen/ghq: ghq
 
 rbenv-plugins:
   rbenv-each: "https://github.com/rbenv/rbenv-each.git"
