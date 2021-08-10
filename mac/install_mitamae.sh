@@ -1,10 +1,28 @@
 #!/bin/bash -xe
 
-readonly MITAMAE_VERSION="1.6.3"
+# See. https://github.com/itamae-kitchen/mitamae/releases
+readonly MITAMAE_VERSION="1.12.7"
 
 rm -f bin/*
 
-cd bin/
-wget https://github.com/itamae-kitchen/mitamae/releases/download/v${MITAMAE_VERSION}/mitamae-x86_64-darwin.tar.gz
-tar -zxf mitamae-x86_64-darwin.tar.gz
-cd ..
+machine=$(uname -m)
+case "${machine}" in
+"x86_64" )
+  archive_name="mitamae-x86_64-darwin"
+  ;;
+"arm64" )
+  archive_name="mitamae-aarch64-darwin"
+  ;;
+* )
+  echo "Unknown machine"
+  exit 1
+  ;;
+esac
+
+pushd bin/
+
+wget https://github.com/itamae-kitchen/mitamae/releases/download/v${MITAMAE_VERSION}/${archive_name}.tar.gz
+tar -zxf ${archive_name}.tar.gz
+mv ${archive_name} mitamae
+
+popd

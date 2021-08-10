@@ -4,32 +4,27 @@ homebrew:
     - circleci
     - cmake
     - direnv
+    - google-cloud-sdk
+    - gh
     - git
     - git-now
     - gnu-getopt
     - gnu-sed
     - go
     - heroku/brew/heroku
-    - icu4c
-    - imagemagick
     - jq
-    # - maven
     - memcached
     - mysql
     - node
     - nodenv
     - openssh
     - openssl
-    # - packer
     - peco
     - postgresql
-    - rbenv
-    - rbenv-default-gems
     - readline
-    - redpen
     - redis
-    - ruby-build
     - sl
+    - sshuttle
     - tfenv
     - the_silver_searcher
     - tig
@@ -49,14 +44,12 @@ homebrew:
     - postgresql
     - redis
 
-go-get:
-  - github.com/motemen/ghq
+go-packages:
+  github.com/x-motemen/ghq: ghq
 
 rbenv-plugins:
   rbenv-each: "https://github.com/rbenv/rbenv-each.git"
 
 atom-packages:
-  - language-review
-  - linter-redpen
   - sort-lines
   - sublime-style-column-selection
