@@ -14,7 +14,7 @@ case "${machine}" in
   archive_name="mitamae-aarch64-darwin"
   ;;
 * )
-  echo "Unknown machine"
+  echo "${machine} is unknown machine"
   exit 1
   ;;
 esac
