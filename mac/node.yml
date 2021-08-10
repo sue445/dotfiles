@@ -44,7 +44,7 @@ homebrew:
     - redis
 
 go-get:
-  - github.com/motemen/ghq
+  - github.com/x-motemen/ghq
 
 rbenv-plugins:
   rbenv-each: "https://github.com/rbenv/rbenv-each.git"
