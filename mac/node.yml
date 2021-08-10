@@ -11,6 +11,7 @@ homebrew:
     - gnu-getopt
     - gnu-sed
     - go
+    - helm
     - heroku/brew/heroku
     - jq
     - memcached
