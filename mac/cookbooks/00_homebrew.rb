@@ -6,7 +6,9 @@ node[:homebrew][:tap_names].each do |name|
 end
 
 node[:homebrew][:package_names].each do |name|
-  package name
+  package name do
+    not_if "brew list | grep -E '^#{name}(@.+)?$'"
+  end
 end
 
 node[:homebrew][:service_names].each do |name|
