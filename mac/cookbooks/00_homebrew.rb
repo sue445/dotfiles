@@ -1,3 +1,6 @@
+# NOTE: brewでgoを入れないとgo getができないので全てのcookbookの一番最初に実行する
+
+# NOTE: aws-sam-cliのように先にbrew tapしないとinstallできないものがあるので先に実行する
 node[:homebrew][:tap_names] ||= []
 node[:homebrew][:tap_names].each do |name|
   execute "brew tap #{name}" do
