@@ -1,4 +1,8 @@
-rbenv_root = `rbenv root`.strip
+rbenv_root = ENV["HOME"] + "/.rbenv"
+
+git rbenv_root do
+  repository "https://github.com/rbenv/rbenv.git"
+end
 
 directory "#{rbenv_root}/plugins"
 
