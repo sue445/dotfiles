@@ -51,6 +51,7 @@ go-packages:
   github.com/x-motemen/ghq: ghq
 
 rbenv-plugins:
+  ruby-build: "https://github.com/rbenv/ruby-build.git"
   rbenv-each: "https://github.com/rbenv/rbenv-each.git"
 
 atom-packages:
