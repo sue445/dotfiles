@@ -1,0 +1,27 @@
+#! /usr/bin/env ruby
+
+user = `whoami`.strip
+
+if `git remote`.include?(user)
+  puts "git remote '#{user}' is exists"
+  exit 0
+end
+
+remote_line = `git remote -v | grep 'origin' | grep '(fetch)'`.strip
+
+if remote_line.empty?
+  puts "Not found origin"
+  exit 1
+end
+
+origin_url = remote_line.split(/\s+/)[1]
+
+unless origin_url.include?("github.com")
+  puts "'#{origin_url}' isn't github.com's URL"
+end
+
+user_url = origin_url.gsub(%r{(?<=github.com/)(.+?)(?=/)}, user)
+
+system("git remote add #{user} #{user_url}", exception: true)
+
+puts "Added '#{user_url}' to '#{user}'"
