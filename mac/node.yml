@@ -4,6 +4,7 @@ homebrew:
     - aws-sam-cli
     - circleci
     - cmake
+    - coreutils
     - direnv
     - google-cloud-sdk
     - gh
