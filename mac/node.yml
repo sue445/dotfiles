@@ -20,11 +20,9 @@ homebrew:
     - mysql
     - node
     - nodenv
-    - openssh
     - openssl
     - peco
     - postgresql
-    - readline
     - redis
     - sl
     - sops
@@ -38,6 +36,10 @@ homebrew:
     - watch
     - wget
     - yarn
+
+    # for ruby-build c.f. https://github.com/rbenv/ruby-build/wiki
+    - openssh
+    - readline
 
   tap_names:
     - aws/tap
