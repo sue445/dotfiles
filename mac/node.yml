@@ -21,6 +21,7 @@ homebrew:
     - node
     - nodenv
     - openssl
+    - pipenv
     - peco
     - postgresql
     - redis
