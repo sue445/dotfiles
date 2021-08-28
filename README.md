@@ -41,7 +41,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 
 ## mergetoolにp4mergeを使う
-```
+```sh
 ln -s ~/dotfiles/scripts/p4merge /usr/local/bin/p4merge
 ```
 
