@@ -8,7 +8,8 @@ ln -s ~/dotfiles/_tigrc     ~/.tigrc
 ln -s ~/dotfiles/_tmux_3_x.conf ~/.tmux.conf
 ln -s ~/dotfiles/vimfiles   ~/.vim
 ln -s ~/dotfiles/_vimrc     ~/.vimrc
-ln -s ~/dotfiles/_rbenv/default-gems ~/.rbenv/default-gems
+
+# ln -s ~/dotfiles/_rbenv/default-gems ~/.rbenv/default-gems
 
 cp -i ~/dotfiles/_gitconfig.local.example ~/.gitconfig.local
 
