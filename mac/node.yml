@@ -23,6 +23,7 @@ homebrew:
     - openssl
     - peco
     - postgresql
+    - pwgen
     - redis
     - sl
     - sops
