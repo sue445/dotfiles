@@ -4,3 +4,7 @@
 
 [merge]
   tool = vimdiff
+
+# [ghq]
+#   root = /Users/sue445/go/src/
+#   root = /Users/sue445/workspace/

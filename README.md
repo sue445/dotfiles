@@ -22,8 +22,28 @@ tm
 prefix + I
 ```
 
-### mergetoolにp4mergeを使う
-    ln -s ~/dotfiles/scripts/p4merge /usr/local/bin/p4merge
+## `~/.bash_profile`
+```sh
+source ~/.bashrc
+
+# source ~/dotfiles/init_rbenv.txt
+# source ~/dotfiles/init_pipenv.txt
+# source ~/dotfiles/init_nodenv.txt
+
+# source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+# source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
+
+export GOPATH="$HOME/go"
+export PATH=$GOPATH/bin:$PATH
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
+```
+
+
+## mergetoolにp4mergeを使う
+```sh
+ln -s ~/dotfiles/scripts/p4merge /usr/local/bin/p4merge
+```
 
 * http://wadahiro.hatenablog.com/entry/20111115/1321372150
 * http://d.hatena.ne.jp/nakamura001/20110321/1300699836
@@ -35,6 +55,3 @@ http://www.namaraii.com/files/vim-cheatsheet.pdf
 # Vimプラグイン
 ## NERDTreeのショートカット
 http://vimwiki.net/?scripts%2F18
-
-[![endorse](http://api.coderwall.com/sue445/endorsecount.png)](http://coderwall.com/sue445)
-
