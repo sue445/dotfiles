@@ -25,6 +25,7 @@ homebrew:
     - pipenv
     - peco
     - postgresql
+    - pwgen
     - redis
     - sl
     - sops
