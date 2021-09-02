@@ -11,7 +11,7 @@ end
 formula_installed_packages = `brew list -1 --formula`.each_line.map(&:strip)
 cask_installed_packages    = `brew list -1 --cask`.each_line.map(&:strip)
 
-# NOTE: mruby contains Set
+# NOTE: mruby doesn't contains Set
 all_installed_packages = (formula_installed_packages + cask_installed_packages).each_with_object({}) do |package_name, hash|
   package_name = package_name.gsub(/@.+$/, "")
   hash[package_name] = true
