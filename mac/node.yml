@@ -15,7 +15,6 @@ homebrew:
     - go
     - helm
     - heroku/brew/heroku
-    - java
     - jq
     - memcached
     - mysql
