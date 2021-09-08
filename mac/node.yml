@@ -16,6 +16,7 @@ homebrew:
     - helm
     - heroku/brew/heroku
     - jq
+    - libgda
     - memcached
     - mysql
     - node
