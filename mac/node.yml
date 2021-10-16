@@ -2,6 +2,7 @@ homebrew:
   package_names:
     - awscli
     - aws-sam-cli
+    - chromedriver
     - circleci
     - cmake
     - coreutils
@@ -27,6 +28,7 @@ homebrew:
     - postgresql
     - pwgen
     - redis
+    - selenium-server-standalone
     - sl
     - sops
     - sshuttle
