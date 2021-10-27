@@ -28,7 +28,7 @@ homebrew:
     - postgresql
     - pwgen
     - redis
-    - selenium-server-standalone
+    - selenium-server
     - sl
     - sops
     - sshuttle
