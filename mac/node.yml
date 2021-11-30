@@ -25,6 +25,7 @@ homebrew:
     - openssl
     - pipenv
     - peco
+    - poetry
     - postgresql
     - pwgen
     - redis
