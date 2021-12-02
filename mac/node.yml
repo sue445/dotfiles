@@ -66,3 +66,4 @@ rbenv-plugins:
 atom-packages:
   - sort-lines
   - sublime-style-column-selection
+  - wordcount
