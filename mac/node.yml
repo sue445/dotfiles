@@ -64,6 +64,7 @@ rbenv-plugins:
   rbenv-each: "https://github.com/rbenv/rbenv-each.git"
 
 atom-packages:
+  - pretty-json
   - sort-lines
   - sublime-style-column-selection
   - wordcount
