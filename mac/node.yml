@@ -15,6 +15,7 @@ homebrew:
     - gnu-sed
     - go
     - helm
+    - helmfile
     - heroku/brew/heroku
     - jq
     - libgda
