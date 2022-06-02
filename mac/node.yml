@@ -19,6 +19,7 @@ homebrew:
     - heroku/brew/heroku
     - jq
     - libgda
+    - maven
     - memcached
     - mysql
     - node
