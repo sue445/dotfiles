@@ -31,6 +31,7 @@ homebrew:
     - postgresql
     - pwgen
     - redis
+    - rust
     - selenium-server
     - sl
     - sops
