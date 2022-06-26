@@ -41,6 +41,7 @@ homebrew:
     - tig
     - tmux
     - tree
+    - vagrant
     - vim
     - watch
     - wget
