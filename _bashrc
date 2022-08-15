@@ -18,6 +18,7 @@ esac
 # alias cp='cp -i'
 # alias mv='mv -i'
 
+alias ag='ag --hidden'
 alias be='bundle exec'
 alias g='git'
 alias gs='git status -sb'
