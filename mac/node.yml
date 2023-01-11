@@ -2,6 +2,7 @@ homebrew:
   package_names:
     - awscli
     - aws-sam-cli
+    - asdf
     - chromedriver
     - circleci
     - cmake
