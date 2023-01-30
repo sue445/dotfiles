@@ -6,6 +6,8 @@ user=`git config github.user`
 git remote show ${user} > /dev/null 2>&1
 has_repo=$?
 
+set -e
+
 git fetch --all --prune
 modified=`git status | grep modified | wc -l`
 if [ $modified -gt 0 ] ; then git stash ; fi
