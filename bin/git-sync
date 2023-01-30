@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 # ref. http://qiita.com/masarakki/items/27f2cb456b4801ccb31b
 
