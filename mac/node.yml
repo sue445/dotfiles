@@ -25,6 +25,7 @@ homebrew:
     - mysql
     - node
     - nodenv
+    - packer
     - openssl
     - pipenv
     - peco
