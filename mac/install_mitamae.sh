@@ -1,7 +1,7 @@
 #!/bin/bash -xe
 
 # See. https://github.com/itamae-kitchen/mitamae/releases
-readonly MITAMAE_VERSION="1.12.7"
+readonly MITAMAE_VERSION="1.14.0"
 
 rm -f bin/*
 
