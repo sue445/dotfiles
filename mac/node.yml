@@ -30,7 +30,7 @@ homebrew:
     - pipenv
     - peco
     - poetry
-    - postgresql
+    - postgresql@15
     - pwgen
     - redis
     - rust
