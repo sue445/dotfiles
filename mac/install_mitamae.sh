@@ -21,7 +21,7 @@ esac
 
 pushd bin/
 
-wget https://github.com/itamae-kitchen/mitamae/releases/download/v${MITAMAE_VERSION}/${archive_name}.tar.gz
+curl --remote-name https://github.com/itamae-kitchen/mitamae/releases/download/v${MITAMAE_VERSION}/${archive_name}.tar.gz
 tar -zxf ${archive_name}.tar.gz
 mv ${archive_name} mitamae
 
