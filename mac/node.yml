@@ -10,6 +10,7 @@ homebrew:
     - direnv
     - google-cloud-sdk
     - gh
+    - ghq
     - git
     - git-now
     - gnu-getopt
@@ -62,8 +63,8 @@ homebrew:
     - postgresql
     - redis
 
-go-packages:
-  github.com/x-motemen/ghq: ghq
+# go-packages:
+#   github.com/x-motemen/ghq: ghq
 
 rbenv-plugins:
   ruby-build: "https://github.com/rbenv/ruby-build.git"
