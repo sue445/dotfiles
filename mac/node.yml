@@ -21,6 +21,7 @@ homebrew:
     - heroku/brew/heroku
     - jq
     - libgda
+    - libpq
     - maven
     - memcached
     - mysql
