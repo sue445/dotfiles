@@ -8,6 +8,7 @@ homebrew:
     - cmake
     - coreutils
     - direnv
+    - firebase-cli
     - google-cloud-sdk
     - gh
     - ghq
