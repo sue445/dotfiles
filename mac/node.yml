@@ -71,6 +71,7 @@ homebrew:
 rbenv-plugins:
   ruby-build: "https://github.com/rbenv/ruby-build.git"
   rbenv-each: "https://github.com/rbenv/rbenv-each.git"
+  rbenv-update: "https://github.com/rkh/rbenv-update.git"
 
 # atom-packages:
 #   - pretty-json
