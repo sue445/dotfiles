@@ -54,3 +54,4 @@ gemfiles/vendor/
 
 # Others
 .env
+core.*
