@@ -128,5 +128,5 @@ set encoding=utf-8
 set fileencodings=utf-8,cp932,sjis,euc-jp,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213
 
 filetype on
-syntax on
-colorscheme desert
+" syntax on
+" colorscheme desert
