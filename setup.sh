@@ -1,7 +1,6 @@
 #!/bin/bash -x
 
 ln -s ~/dotfiles/_agignore      ~/.agignore
-ln -s ~/dotfiles/_bashrc        ~/.bashrc
 ln -s ~/dotfiles/_gitconfig     ~/.gitconfig
 ln -s ~/dotfiles/_gitignore     ~/.gitignore
 ln -s ~/dotfiles/_tigrc         ~/.tigrc
@@ -10,6 +9,13 @@ ln -s ~/dotfiles/vimfiles       ~/.vim
 ln -s ~/dotfiles/_vimrc         ~/.vimrc
 
 # ln -s ~/dotfiles/_rbenv/default-gems ~/.rbenv/default-gems
+
+# backup original ~/.bashrc
+if [ -f ~/.bashrc ] && [ ! -L ~/.bashrc ]; then
+  mv ~/.bashrc  ~/.bashrc.$(date +"%Y%m%d%H%M%S")
+fi
+
+ln -s ~/dotfiles/_bashrc ~/.bashrc
 
 cp -i ~/dotfiles/_gitconfig.local.example ~/.gitconfig.local
 
