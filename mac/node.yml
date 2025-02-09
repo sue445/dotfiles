@@ -17,6 +17,7 @@ homebrew:
     - gnu-getopt
     - gnu-sed
     - go
+    - groff
     - helm
     - helmfile
     - heroku/brew/heroku
