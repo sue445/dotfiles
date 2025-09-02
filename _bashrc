@@ -122,11 +122,7 @@ if [ -n "$RBENV_ROOT" -o -f "$HOME/.rbenv/shims/gem" ] ; then
 fi
 
 function repo(){
-  if [ $(ghq list --full-path "$1" | wc -l) = "1" ]; then
-    cd $(ghq list --full-path "$1")
-  else
-    cd $(ghq list --full-path "$1" | peco)
-  fi
+  cd $(ghq list --full-path "$1" | peco --select-1)
 }
 
 function bi-vendor() {
