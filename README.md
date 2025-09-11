@@ -48,6 +48,20 @@ ln -s ~/dotfiles/scripts/p4merge /usr/local/bin/p4merge
 * http://wadahiro.hatenablog.com/entry/20111115/1321372150
 * http://d.hatena.ne.jp/nakamura001/20110321/1300699836
 
+## laminate
+https://github.com/Songmu/laminate
+
+`~/.bash_profile` に下記を追加
+
+```sh
+export XDG_CONFIG_HOME=~/.config
+``
+
+```sh
+mkdir -p $XDG_CONFIG_HOME/laminate
+ln -s ~/dotfiles/config/laminate/config.yaml $XDG_CONFIG_HOME/laminate/config.yaml
+```
+
 # Vimコマンド
 ## チートシート
 http://www.namaraii.com/files/vim-cheatsheet.pdf
