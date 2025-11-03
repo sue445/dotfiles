@@ -24,3 +24,5 @@ if [ $branch != $master ] ; then
     fi
 fi
 if [ $modified -gt 0 ] ; then git stash pop ; fi
+
+git submodule update --init --recursive
