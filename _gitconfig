@@ -49,7 +49,7 @@
 
 [alias]
   n  = now --all --stat
-  fm = !git fetch --prune origin && git merge --ff origin/$(git branch --contains HEAD 2>/dev/null | grep "^*" | tr -d '\\* ')
+  fm = !git fetch --prune origin && git merge --ff origin/$(git branch --contains HEAD 2>/dev/null | grep "^*" | tr -d '\\* ') && git submodule update --init --recursive
   dry-merge = merge --no-commit --no-ff
   mt = mergetool
   ds = diff --stat
