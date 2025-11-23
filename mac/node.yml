@@ -1,5 +1,6 @@
 homebrew:
   package_names:
+    - 1password-cli
     - awscli
     - aws-sam-cli
     - asdf
