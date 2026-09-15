@@ -21,6 +21,7 @@ esac
 alias ag='ag --hidden'
 alias be='bundle exec'
 alias g='git'
+alias gal='gcloud auth login'
 alias gs='git status -sb'
 alias r='rake'
 alias re='rbenv'
