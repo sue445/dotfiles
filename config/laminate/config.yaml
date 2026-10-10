@@ -7,7 +7,7 @@ commands:
   run: 'mmdc -i - -o "{{output}}" --quiet --scale 2'
   ext: png
 - lang: '{go,html,java,javascript,python,rb,ruby,rust,ts,typescript,yml}'
-  run: 'silicon -l "{{lang}}" -o "{{output}}"'
+  run: 'silicon -l "{{lang}}" -o "{{output}}" --background "#00000000" --shadow-color "#00000000"'
   ext: png
 - lang: '*'
   run: ['convert', '-background', 'white', '-fill', 'black', 'label:{{input}}', '{{output}}']
