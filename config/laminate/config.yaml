@@ -1,4 +1,4 @@
-cache: 1h
+# cache: 1h
 commands:
 - lang: qr
   run: 'qrencode -o "{{output}}" -t png "{{input}}"'
