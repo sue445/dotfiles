@@ -6,7 +6,7 @@ commands:
 - lang: mermaid
   run: 'mmdc -i - -o "{{output}}" --quiet --scale 2'
   ext: png
-- lang: '{go,html,java,javascript,python,rb,ruby,rust,ts,typescript,yml}'
+- lang: '{go,html,java,javascript,python,rb,ruby,rust,sh,ts,typescript,yml}'
   run: 'silicon -l "{{lang}}" -o "{{output}}" --background "#00000000" --shadow-color "#00000000" --pad-horiz 0 --pad-vert 0 --shadow-blur-radius 0 --no-window-controls --font "Menlo; Hiragino Sans"'
   ext: png
 - lang: '*'
